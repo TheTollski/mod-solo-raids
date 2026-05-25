@@ -1,6 +1,8 @@
-void AddBlackwingLairSoloRaidScripts();
+void AddRazorgoreTheUntamedSoloRaidScripts();
+void AddVaelastraszTheCorruptSoloRaidScripts();
 
 void Addmod_solo_raidsScripts()
 {
-    AddBlackwingLairSoloRaidScripts();
+    AddRazorgoreTheUntamedSoloRaidScripts();
+    AddVaelastraszTheCorruptSoloRaidScripts();
 }

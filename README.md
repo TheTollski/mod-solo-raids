@@ -8,3 +8,5 @@ Small encounter-specific raid adjustments for solo play.
 - Razorgore's Destroy Egg spell is flagged so that Razorgore's solo casting speed changes its real server cast timer.
 - Razorgore's Destroy Egg spell cooldown is cleared after each successful cast in a solo raid instance.
 - The solo player receives a chat message when these Razorgore tweaks activate.
+- Vaelastrasz the Corrupt's Burning Adrenaline is disabled in a solo raid instance.
+- The solo player receives a chat message when the Vaelastrasz tweak activates.

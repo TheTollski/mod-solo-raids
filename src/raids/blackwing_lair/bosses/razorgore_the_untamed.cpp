@@ -1,6 +1,7 @@
+#include "../solo_raid_utils.h"
+
 #include "Creature.h"
 #include "GlobalScript.h"
-#include "Map.h"
 #include "ObjectGuid.h"
 #include "Player.h"
 #include "ScriptMgr.h"
@@ -14,7 +15,6 @@
 
 namespace
 {
-constexpr uint32 MAP_BLACKWING_LAIR = 469;
 constexpr uint32 NPC_RAZORGORE = 12435;
 constexpr uint32 SPELL_DESTROY_EGG = 19873;
 constexpr float RAZORGORE_SOLO_CAST_SPEED_MOD = 100.0f;
@@ -22,54 +22,12 @@ constexpr float RAZORGORE_SOLO_CAST_SPEED_MOD = 100.0f;
 std::set<ObjectGuid> razorgoreHasteApplied;
 std::set<ObjectGuid> razorgoreSoloAnnouncementSent;
 
-bool IsSoloRaidMap(Map const* map)
-{
-    if (!map || map->GetId() != MAP_BLACKWING_LAIR)
-        return false;
-
-    uint32 playerCount = 0;
-
-    for (Map::PlayerList::const_iterator itr = map->GetPlayers().begin(); itr != map->GetPlayers().end(); ++itr)
-    {
-        Player const* player = itr->GetSource();
-        if (!player || player->IsGameMaster())
-            continue;
-
-        if (++playerCount > 1)
-            return false;
-    }
-
-    return playerCount == 1;
-}
-
-Player* GetSoloRaidPlayer(Map const* map)
-{
-    if (!map || map->GetId() != MAP_BLACKWING_LAIR)
-        return nullptr;
-
-    Player* soloPlayer = nullptr;
-
-    for (Map::PlayerList::const_iterator itr = map->GetPlayers().begin(); itr != map->GetPlayers().end(); ++itr)
-    {
-        Player* player = itr->GetSource();
-        if (!player || player->IsGameMaster())
-            continue;
-
-        if (soloPlayer)
-            return nullptr;
-
-        soloPlayer = player;
-    }
-
-    return soloPlayer;
-}
-
 bool IsSoloControlledRazorgore(Unit const* unit)
 {
     if (!unit || unit->GetEntry() != NPC_RAZORGORE || !unit->IsCharmed())
         return false;
 
-    return IsSoloRaidMap(unit->GetMap());
+    return SoloRaids::BlackwingLair::IsSoloRaidMap(unit->GetMap());
 }
 
 void AnnounceRazorgoreSoloTweaks(Creature* razorgore)
@@ -83,7 +41,7 @@ void AnnounceRazorgoreSoloTweaks(Creature* razorgore)
 
     Player* player = razorgore->GetCharmerOrOwnerPlayerOrPlayerItself();
     if (!player)
-        player = GetSoloRaidPlayer(razorgore->GetMap());
+        player = SoloRaids::BlackwingLair::GetSoloRaidPlayer(razorgore->GetMap());
 
     if (!player)
         return;
@@ -132,10 +90,10 @@ void ClearDestroyEggCooldown(Creature* razorgore)
 }
 }
 
-class BlackwingLairSoloRaidGlobalScript : public GlobalScript
+class RazorgoreTheUntamedSoloRaidGlobalScript : public GlobalScript
 {
 public:
-    BlackwingLairSoloRaidGlobalScript() : GlobalScript("BlackwingLairSoloRaidGlobalScript", { GLOBALHOOK_ON_LOAD_SPELL_CUSTOM_ATTR }) { }
+    RazorgoreTheUntamedSoloRaidGlobalScript() : GlobalScript("RazorgoreTheUntamedSoloRaidGlobalScript", { GLOBALHOOK_ON_LOAD_SPELL_CUSTOM_ATTR }) { }
 
     void OnLoadSpellCustomAttr(SpellInfo* spellInfo) override
     {
@@ -147,10 +105,10 @@ public:
     }
 };
 
-class BlackwingLairSoloRaidCreatureScript : public AllCreatureScript
+class RazorgoreTheUntamedSoloRaidCreatureScript : public AllCreatureScript
 {
 public:
-    BlackwingLairSoloRaidCreatureScript() : AllCreatureScript("BlackwingLairSoloRaidCreatureScript") { }
+    RazorgoreTheUntamedSoloRaidCreatureScript() : AllCreatureScript("RazorgoreTheUntamedSoloRaidCreatureScript") { }
 
     void OnAllCreatureUpdate(Creature* creature, uint32 /*diff*/) override
     {
@@ -174,10 +132,10 @@ public:
     }
 };
 
-class BlackwingLairSoloRaidSpellScript : public AllSpellScript
+class RazorgoreTheUntamedSoloRaidSpellScript : public AllSpellScript
 {
 public:
-    BlackwingLairSoloRaidSpellScript() : AllSpellScript("BlackwingLairSoloRaidSpellScript", { ALLSPELLHOOK_CAN_PREPARE, ALLSPELLHOOK_ON_PREPARE, ALLSPELLHOOK_ON_CAST }) { }
+    RazorgoreTheUntamedSoloRaidSpellScript() : AllSpellScript("RazorgoreTheUntamedSoloRaidSpellScript", { ALLSPELLHOOK_CAN_PREPARE, ALLSPELLHOOK_ON_PREPARE, ALLSPELLHOOK_ON_CAST }) { }
 
     bool CanPrepare(Spell* spell, SpellCastTargets const* /*targets*/, AuraEffect const* /*triggeredByAura*/) override
     {
@@ -214,9 +172,9 @@ public:
     }
 };
 
-void AddBlackwingLairSoloRaidScripts()
+void AddRazorgoreTheUntamedSoloRaidScripts()
 {
-    new BlackwingLairSoloRaidGlobalScript();
-    new BlackwingLairSoloRaidCreatureScript();
-    new BlackwingLairSoloRaidSpellScript();
+    new RazorgoreTheUntamedSoloRaidGlobalScript();
+    new RazorgoreTheUntamedSoloRaidCreatureScript();
+    new RazorgoreTheUntamedSoloRaidSpellScript();
 }
