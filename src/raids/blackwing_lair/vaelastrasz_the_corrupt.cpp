@@ -1,4 +1,4 @@
-#include "../solo_raid_utils.h"
+#include "solo_raid_utils.h"
 
 #include "Creature.h"
 #include "ObjectGuid.h"
