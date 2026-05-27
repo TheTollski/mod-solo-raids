@@ -1,4 +1,4 @@
-#include "solo_raid_utils.h"
+#include "../../solo_raid_utils.h"
 
 #include "Creature.h"
 #include "ObjectGuid.h"
@@ -14,6 +14,7 @@ namespace
 {
 constexpr uint32 NPC_VAELASTRAZ = 13020;
 constexpr uint32 SPELL_BURNING_ADRENALINE = 18173;
+constexpr uint32 SOLO_RAIDS_MAP_BLACKWING_LAIR = 469;
 
 std::set<ObjectGuid> vaelastraszSoloAnnouncementSent;
 
@@ -26,7 +27,7 @@ void AnnounceVaelastraszSoloTweaks(Creature* vaelastrasz)
     if (vaelastraszSoloAnnouncementSent.count(guid) != 0)
         return;
 
-    Player* player = SoloRaids::BlackwingLair::GetSoloRaidPlayer(vaelastrasz->GetMap());
+    Player* player = SoloRaids::GetSoloPlayer(vaelastrasz->GetMap(), SOLO_RAIDS_MAP_BLACKWING_LAIR);
     if (!player)
         return;
 
@@ -45,7 +46,7 @@ public:
         if (!creature || creature->GetEntry() != NPC_VAELASTRAZ)
             return;
 
-        if (creature->IsInCombat() && SoloRaids::BlackwingLair::IsSoloRaidMap(creature->GetMap()))
+        if (creature->IsInCombat() && SoloRaids::IsSoloMap(creature->GetMap(), SOLO_RAIDS_MAP_BLACKWING_LAIR))
             AnnounceVaelastraszSoloTweaks(creature);
     }
 
@@ -69,7 +70,7 @@ public:
             return;
 
         Unit* caster = spell->GetCaster();
-        if (caster && caster->GetEntry() == NPC_VAELASTRAZ && SoloRaids::BlackwingLair::IsSoloRaidMap(caster->GetMap()))
+        if (caster && caster->GetEntry() == NPC_VAELASTRAZ && SoloRaids::IsSoloMap(caster->GetMap(), SOLO_RAIDS_MAP_BLACKWING_LAIR))
             result = SPELL_FAILED_DONT_REPORT;
     }
 };

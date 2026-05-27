@@ -1,4 +1,4 @@
-#include "solo_raid_utils.h"
+#include "../../solo_raid_utils.h"
 
 #include "Creature.h"
 #include "ObjectGuid.h"
@@ -14,6 +14,7 @@ namespace
 constexpr uint32 NPC_EBONROC = 14601;
 constexpr uint32 SPELL_SHADOW_OF_EBONROC = 23340;
 constexpr int32 SHADOW_OF_EBONROC_SOLO_DURATION = 2000;
+constexpr uint32 SOLO_RAIDS_MAP_BLACKWING_LAIR = 469;
 
 std::set<ObjectGuid> ebonrocSoloAnnouncementSent;
 
@@ -26,7 +27,7 @@ void AnnounceEbonrocSoloTweaks(Creature* ebonroc)
     if (ebonrocSoloAnnouncementSent.count(guid) != 0)
         return;
 
-    Player* player = SoloRaids::BlackwingLair::GetSoloRaidPlayer(ebonroc->GetMap());
+    Player* player = SoloRaids::GetSoloPlayer(ebonroc->GetMap(), SOLO_RAIDS_MAP_BLACKWING_LAIR);
     if (!player)
         return;
 
@@ -45,7 +46,7 @@ public:
         if (!creature || creature->GetEntry() != NPC_EBONROC)
             return;
 
-        if (creature->IsInCombat() && SoloRaids::BlackwingLair::IsSoloRaidMap(creature->GetMap()))
+        if (creature->IsInCombat() && SoloRaids::IsSoloMap(creature->GetMap(), SOLO_RAIDS_MAP_BLACKWING_LAIR))
             AnnounceEbonrocSoloTweaks(creature);
     }
 
@@ -69,7 +70,7 @@ public:
             return;
 
         Unit const* owner = aura->GetUnitOwner();
-        if (!SoloRaids::BlackwingLair::IsSoloRaidPlayer(owner))
+        if (!SoloRaids::IsSoloPlayer(owner, SOLO_RAIDS_MAP_BLACKWING_LAIR))
             return;
 
         maxDuration = SHADOW_OF_EBONROC_SOLO_DURATION;

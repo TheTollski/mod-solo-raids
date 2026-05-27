@@ -1,4 +1,4 @@
-#include "solo_raid_utils.h"
+#include "../../solo_raid_utils.h"
 
 #include "Creature.h"
 #include "GlobalScript.h"
@@ -17,6 +17,7 @@ namespace
 {
 constexpr uint32 NPC_RAZORGORE = 12435;
 constexpr uint32 SPELL_DESTROY_EGG = 19873;
+constexpr uint32 SOLO_RAIDS_MAP_BLACKWING_LAIR = 469;
 constexpr float RAZORGORE_SOLO_CAST_SPEED_MOD = 100.0f;
 
 std::set<ObjectGuid> razorgoreHasteApplied;
@@ -27,7 +28,7 @@ bool IsSoloControlledRazorgore(Unit const* unit)
     if (!unit || unit->GetEntry() != NPC_RAZORGORE || !unit->IsCharmed())
         return false;
 
-    return SoloRaids::BlackwingLair::IsSoloRaidMap(unit->GetMap());
+    return SoloRaids::IsSoloMap(unit->GetMap(), SOLO_RAIDS_MAP_BLACKWING_LAIR);
 }
 
 void AnnounceRazorgoreSoloTweaks(Creature* razorgore)
@@ -41,7 +42,7 @@ void AnnounceRazorgoreSoloTweaks(Creature* razorgore)
 
     Player* player = razorgore->GetCharmerOrOwnerPlayerOrPlayerItself();
     if (!player)
-        player = SoloRaids::BlackwingLair::GetSoloRaidPlayer(razorgore->GetMap());
+        player = SoloRaids::GetSoloPlayer(razorgore->GetMap(), SOLO_RAIDS_MAP_BLACKWING_LAIR);
 
     if (!player)
         return;

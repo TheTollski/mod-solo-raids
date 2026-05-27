@@ -17,3 +17,8 @@ Small encounter-specific raid adjustments for solo play.
 
 ### Chromaggus
 - Chromaggus's Time Lapse is disabled in a solo raid instance.
+
+## Temple of Ahn'Qiraj
+
+### Twin Emperors
+- Twin Emperors' Heal Brother is disabled in a solo raid instance.

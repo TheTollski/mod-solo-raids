@@ -1,4 +1,4 @@
-#include "solo_raid_utils.h"
+#include "../../solo_raid_utils.h"
 
 #include "Creature.h"
 #include "ObjectGuid.h"
@@ -14,6 +14,7 @@ namespace
 {
 constexpr uint32 NPC_CHROMAGGUS = 14020;
 constexpr uint32 SPELL_TIME_LAPSE = 23310;
+constexpr uint32 SOLO_RAIDS_MAP_BLACKWING_LAIR = 469;
 
 std::set<ObjectGuid> chromaggusSoloAnnouncementSent;
 
@@ -26,7 +27,7 @@ void AnnounceChromaggusSoloTweaks(Creature* chromaggus)
     if (chromaggusSoloAnnouncementSent.count(guid) != 0)
         return;
 
-    Player* player = SoloRaids::BlackwingLair::GetSoloRaidPlayer(chromaggus->GetMap());
+    Player* player = SoloRaids::GetSoloPlayer(chromaggus->GetMap(), SOLO_RAIDS_MAP_BLACKWING_LAIR);
     if (!player)
         return;
 
@@ -45,7 +46,7 @@ public:
         if (!creature || creature->GetEntry() != NPC_CHROMAGGUS)
             return;
 
-        if (creature->IsInCombat() && SoloRaids::BlackwingLair::IsSoloRaidMap(creature->GetMap()))
+        if (creature->IsInCombat() && SoloRaids::IsSoloMap(creature->GetMap(), SOLO_RAIDS_MAP_BLACKWING_LAIR))
             AnnounceChromaggusSoloTweaks(creature);
     }
 
@@ -69,7 +70,7 @@ public:
             return;
 
         Unit* caster = spell->GetCaster();
-        if (caster && caster->GetEntry() == NPC_CHROMAGGUS && SoloRaids::BlackwingLair::IsSoloRaidMap(caster->GetMap()))
+        if (caster && caster->GetEntry() == NPC_CHROMAGGUS && SoloRaids::IsSoloMap(caster->GetMap(), SOLO_RAIDS_MAP_BLACKWING_LAIR))
             result = SPELL_FAILED_DONT_REPORT;
     }
 };
