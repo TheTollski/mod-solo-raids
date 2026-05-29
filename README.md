@@ -22,3 +22,8 @@ Small encounter-specific raid adjustments for solo play.
 
 ### Twin Emperors
 - Twin Emperors' Heal Brother is disabled in a solo raid instance.
+
+## Naxxramas
+
+### Patchwerk
+- Patchwerk's Hateful Strike is disabled in a solo raid instance.
