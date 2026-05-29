@@ -25,5 +25,9 @@ Small encounter-specific raid adjustments for solo play.
 
 ## Naxxramas
 
+### Gluth
+- Gluth's zombie healing is disabled in a solo raid instance.
+- Gluth's Mortal Wound is capped at 3 stacks on the solo player.
+
 ### Patchwerk
 - Patchwerk's Hateful Strike is disabled in a solo raid instance.
