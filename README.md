@@ -31,3 +31,6 @@ Small encounter-specific raid adjustments for solo play.
 
 ### Patchwerk
 - Patchwerk's Hateful Strike is disabled in a solo raid instance.
+
+### Thaddius
+- Feugen's Static Field mana drain is disabled for the solo player.

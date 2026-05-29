@@ -3,6 +3,7 @@ void AddEbonrocSoloRaidScripts();
 void AddGluthSoloRaidScripts();
 void AddPatchwerkSoloRaidScripts();
 void AddRazorgoreTheUntamedSoloRaidScripts();
+void AddThaddiusSoloRaidScripts();
 void AddTwinEmperorsSoloRaidScripts();
 void AddVaelastraszTheCorruptSoloRaidScripts();
 
@@ -13,6 +14,7 @@ void Addmod_solo_raidsScripts()
     AddGluthSoloRaidScripts();
     AddPatchwerkSoloRaidScripts();
     AddRazorgoreTheUntamedSoloRaidScripts();
+    AddThaddiusSoloRaidScripts();
     AddTwinEmperorsSoloRaidScripts();
     AddVaelastraszTheCorruptSoloRaidScripts();
 }
