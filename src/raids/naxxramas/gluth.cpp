@@ -1,4 +1,5 @@
 #include "../../solo_raid_utils.h"
+#include "../../solo_raid_config.h"
 
 #include "Creature.h"
 #include "ObjectGuid.h"
@@ -9,6 +10,7 @@
 
 #include <map>
 #include <set>
+#include <string>
 
 namespace
 {
@@ -18,7 +20,6 @@ constexpr uint32 NPC_ZOMBIE_CHOW = 16360;
 constexpr uint32 NPC_ZOMBIE_CHOW_40 = 351069;
 constexpr uint32 SPELL_MORTAL_WOUND = 25646;
 constexpr uint32 SOLO_RAIDS_MAP_NAXXRAMAS = 533;
-constexpr uint8 MAX_MORTAL_WOUND_STACKS = 3;
 
 std::set<uint32> gluthSoloAnnouncementMaps;
 std::map<ObjectGuid, uint32> gluthHealthBeforeZombieHeal;
@@ -54,7 +55,12 @@ void AnnounceGluthSoloTweaks(Creature* gluth)
     if (gluthSoloAnnouncementMaps.count(instanceId) != 0)
         return;
 
-    player->SendSystemMessage("mod-solo-raids active: Naxxramas solo tweaks enabled for Gluth. Zombie healing disabled, Mortal Wound capped at 3 stacks.");
+    std::string message = "mod-solo-raids active: Naxxramas solo tweaks enabled for Gluth.";
+    if (SoloRaids::Config::DisableGluthZombieHealing())
+        message += " Zombie healing disabled.";
+
+    message += " Mortal Wound capped at " + std::to_string(uint32(SoloRaids::Config::GluthMortalWoundMaxStacks())) + " stacks.";
+    player->SendSystemMessage(message.c_str());
     gluthSoloAnnouncementMaps.insert(instanceId);
 }
 }
@@ -93,13 +99,14 @@ public:
         if (!unit || !aura || aura->GetId() != SPELL_MORTAL_WOUND || !SoloRaids::IsSoloPlayer(unit, SOLO_RAIDS_MAP_NAXXRAMAS))
             return;
 
-        if (aura->GetStackAmount() > MAX_MORTAL_WOUND_STACKS)
-            aura->SetStackAmount(MAX_MORTAL_WOUND_STACKS);
+        uint8 const maxStacks = SoloRaids::Config::GluthMortalWoundMaxStacks();
+        if (aura->GetStackAmount() > maxStacks)
+            aura->SetStackAmount(maxStacks);
     }
 
     void OnUnitDeath(Unit* unit, Unit* killer) override
     {
-        if (!IsZombieChow(unit) || !IsGluth(killer) || !SoloRaids::IsSoloMap(killer->GetMap(), SOLO_RAIDS_MAP_NAXXRAMAS))
+        if (!SoloRaids::Config::DisableGluthZombieHealing() || !IsZombieChow(unit) || !IsGluth(killer) || !SoloRaids::IsSoloMap(killer->GetMap(), SOLO_RAIDS_MAP_NAXXRAMAS))
             return;
 
         gluthHealthBeforeZombieHeal[killer->GetGUID()] = killer->GetHealth();
@@ -107,7 +114,7 @@ public:
 
     void OnUnitUpdate(Unit* unit, uint32 /*diff*/) override
     {
-        if (!IsGluth(unit))
+        if (!SoloRaids::Config::DisableGluthZombieHealing() || !IsGluth(unit))
             return;
 
         auto itr = gluthHealthBeforeZombieHeal.find(unit->GetGUID());

@@ -1,4 +1,5 @@
 #include "../../solo_raid_utils.h"
+#include "../../solo_raid_config.h"
 
 #include "Creature.h"
 #include "ObjectGuid.h"
@@ -29,6 +30,9 @@ void AnnounceChromaggusSoloTweaks(Creature* chromaggus)
 
     Player* player = SoloRaids::GetSoloPlayer(chromaggus->GetMap(), SOLO_RAIDS_MAP_BLACKWING_LAIR);
     if (!player)
+        return;
+
+    if (!SoloRaids::Config::DisableChromaggusTimeLapse())
         return;
 
     player->SendSystemMessage("mod-solo-raids active: Blackwing Lair solo tweaks enabled for Chromaggus. Time Lapse disabled.");
@@ -66,7 +70,7 @@ public:
 
     void OnSpellCheckCast(Spell* spell, bool /*strict*/, SpellCastResult& result) override
     {
-        if (!spell || result != SPELL_CAST_OK || spell->GetSpellInfo()->Id != SPELL_TIME_LAPSE)
+        if (!spell || result != SPELL_CAST_OK || spell->GetSpellInfo()->Id != SPELL_TIME_LAPSE || !SoloRaids::Config::DisableChromaggusTimeLapse())
             return;
 
         Unit* caster = spell->GetCaster();

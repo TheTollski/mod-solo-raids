@@ -1,4 +1,5 @@
 #include "../../solo_raid_utils.h"
+#include "../../solo_raid_config.h"
 
 #include "Creature.h"
 #include "ObjectGuid.h"
@@ -7,6 +8,7 @@
 
 #include <map>
 #include <set>
+#include <string>
 
 namespace
 {
@@ -15,7 +17,6 @@ constexpr uint32 NPC_KELTHUZAD_40 = 351019;
 constexpr uint32 NPC_GUARDIAN_OF_ICECROWN = 16441;
 constexpr uint32 NPC_GUARDIAN_OF_ICECROWN_40 = 351076;
 constexpr uint32 SOLO_RAIDS_MAP_NAXXRAMAS = 533;
-constexpr uint32 MAX_SOLO_GUARDIANS = 2;
 
 std::set<uint32> kelthuzadSoloAnnouncementMaps;
 std::map<ObjectGuid, uint32> activeSoloGuardianInstances;
@@ -61,7 +62,7 @@ void AnnounceKelThuzadSoloTweaks(Creature* kelthuzad)
     if (kelthuzadSoloAnnouncementMaps.count(instanceId) != 0)
         return;
 
-    player->SendSystemMessage("mod-solo-raids active: Naxxramas solo tweaks enabled for Kel'Thuzad. Guardian of Icecrown spawns capped at 2.");
+    player->SendSystemMessage(("mod-solo-raids active: Naxxramas solo tweaks enabled for Kel'Thuzad. Guardian of Icecrown spawns capped at " + std::to_string(SoloRaids::Config::KelThuzadGuardianOfIcecrownMaxActive()) + ".").c_str());
     kelthuzadSoloAnnouncementMaps.insert(instanceId);
 }
 
@@ -75,7 +76,7 @@ void LimitSoloGuardians(Creature* guardian)
         return;
 
     uint32 const instanceId = guardian->GetInstanceId();
-    if (CountActiveGuardians(instanceId) >= MAX_SOLO_GUARDIANS)
+    if (CountActiveGuardians(instanceId) >= SoloRaids::Config::KelThuzadGuardianOfIcecrownMaxActive())
     {
         guardian->DespawnOrUnsummon(Milliseconds(100));
         return;

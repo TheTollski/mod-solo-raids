@@ -2,42 +2,48 @@
 
 Small encounter-specific raid adjustments for solo play.
 
+## Configuration
+
+Copy `conf/solo_raids.conf.dist` to your worldserver module config directory as `solo_raids.conf`.
+Each tweak below has a matching `SoloRaids.*` option in that file.
+Percentage options use fractional values, so `0.5` means 50%.
+
 ## Blackwing Lair
 
 ### Razorgore the Untamed
-- Razorgore the Untamed gets 100% increased casting speed while controlled in a solo raid instance.
+- Razorgore the Untamed gets configurable Destroy Egg cast time while controlled in a solo raid instance.
 - Razorgore's Destroy Egg spell is flagged so that Razorgore's solo casting speed changes its real server cast timer.
-- Razorgore's Destroy Egg spell cooldown is cleared after each successful cast in a solo raid instance.
+- Razorgore's Destroy Egg spell cooldown can be cleared after each successful cast in a solo raid instance.
 
 ### Vaelastrasz the Corrupt
-- Vaelastrasz the Corrupt's Burning Adrenaline is disabled in a solo raid instance.
+- Vaelastrasz the Corrupt's Burning Adrenaline can be disabled in a solo raid instance.
 
 ### Ebonroc
-- Ebonroc's Shadow of Ebonroc duration is reduced to 2 seconds in a solo raid instance.
+- Ebonroc's Shadow of Ebonroc duration is configurable in a solo raid instance.
 
 ### Chromaggus
-- Chromaggus's Time Lapse is disabled in a solo raid instance.
+- Chromaggus's Time Lapse can be disabled in a solo raid instance.
 
 ## Temple of Ahn'Qiraj
 
 ### Twin Emperors
-- Twin Emperors' Heal Brother is disabled in a solo raid instance.
+- Twin Emperors' Heal Brother can be disabled in a solo raid instance.
 
 ## Naxxramas
 
 ### Gluth
-- Gluth's zombie healing is disabled in a solo raid instance.
-- Gluth's Mortal Wound is capped at 3 stacks on the solo player.
+- Gluth's zombie healing can be disabled in a solo raid instance.
+- Gluth's Mortal Wound stack cap is configurable on the solo player.
 
 ### Patchwerk
-- Patchwerk's Hateful Strike is disabled in a solo raid instance.
+- Patchwerk's Hateful Strike can be disabled in a solo raid instance.
 
 ### Kel'Thuzad
-- Kel'Thuzad's Guardian of Icecrown spawns are capped at 2 in a solo raid instance.
+- Kel'Thuzad's Guardian of Icecrown active spawn cap is configurable in a solo raid instance.
 
 ### Instructor Razuvious
-- Instructor Razuvious's Mana Burn is disabled in a solo raid instance.
-- Instructor Razuvious's Unbalancing Strike damage is reduced by 50% against the solo player.
+- Instructor Razuvious's Mana Burn can be disabled in a solo raid instance.
+- Instructor Razuvious's Unbalancing Strike damage percentage is configurable against the solo player.
 
 ### Thaddius
-- Feugen's Static Field mana drain is disabled for the solo player.
+- Feugen's Static Field mana drain can be disabled for the solo player.

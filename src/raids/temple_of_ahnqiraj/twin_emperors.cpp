@@ -1,4 +1,5 @@
 #include "../../solo_raid_utils.h"
+#include "../../solo_raid_config.h"
 
 #include "Creature.h"
 #include "ObjectGuid.h"
@@ -41,6 +42,9 @@ void AnnounceTwinEmperorsSoloTweaks(Creature* twin)
     if (twinEmperorsSoloAnnouncementMaps.count(instanceId) != 0)
         return;
 
+    if (!SoloRaids::Config::DisableTwinEmperorsHealBrother())
+        return;
+
     player->SendSystemMessage("mod-solo-raids active: Temple of Ahn'Qiraj solo tweaks enabled for the Twin Emperors. Heal Brother disabled.");
     twinEmperorsSoloAnnouncementMaps.insert(instanceId);
 }
@@ -76,7 +80,7 @@ public:
 
     void OnSpellCheckCast(Spell* spell, bool /*strict*/, SpellCastResult& result) override
     {
-        if (!spell || result != SPELL_CAST_OK || spell->GetSpellInfo()->Id != SPELL_HEAL_BROTHER)
+        if (!spell || result != SPELL_CAST_OK || spell->GetSpellInfo()->Id != SPELL_HEAL_BROTHER || !SoloRaids::Config::DisableTwinEmperorsHealBrother())
             return;
 
         Unit* caster = spell->GetCaster();

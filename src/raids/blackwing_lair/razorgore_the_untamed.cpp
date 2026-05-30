@@ -1,4 +1,5 @@
 #include "../../solo_raid_utils.h"
+#include "../../solo_raid_config.h"
 
 #include "Creature.h"
 #include "GlobalScript.h"
@@ -11,16 +12,17 @@
 #include "SharedDefines.h"
 #include "Unit.h"
 
+#include <map>
 #include <set>
+#include <string>
 
 namespace
 {
 constexpr uint32 NPC_RAZORGORE = 12435;
 constexpr uint32 SPELL_DESTROY_EGG = 19873;
 constexpr uint32 SOLO_RAIDS_MAP_BLACKWING_LAIR = 469;
-constexpr float RAZORGORE_SOLO_CAST_SPEED_MOD = 100.0f;
 
-std::set<ObjectGuid> razorgoreHasteApplied;
+std::map<ObjectGuid, float> razorgoreHasteApplied;
 std::set<ObjectGuid> razorgoreSoloAnnouncementSent;
 
 bool IsSoloControlledRazorgore(Unit const* unit)
@@ -29,6 +31,15 @@ bool IsSoloControlledRazorgore(Unit const* unit)
         return false;
 
     return SoloRaids::IsSoloMap(unit->GetMap(), SOLO_RAIDS_MAP_BLACKWING_LAIR);
+}
+
+float GetDestroyEggCastHasteBonusPct()
+{
+    float const castTimePct = SoloRaids::Config::RazorgoreDestroyEggCastSpeedPct();
+    if (castTimePct >= 1.0f)
+        return 0.0f;
+
+    return ((1.0f / castTimePct) - 1.0f) * 100.0f;
 }
 
 void AnnounceRazorgoreSoloTweaks(Creature* razorgore)
@@ -47,7 +58,26 @@ void AnnounceRazorgoreSoloTweaks(Creature* razorgore)
     if (!player)
         return;
 
-    player->SendSystemMessage("mod-solo-raids active: Blackwing Lair solo tweaks enabled for Razorgore. Destroy Egg cooldown removed, Destroy Egg cast time halved.");
+    std::string message = "mod-solo-raids active: Blackwing Lair solo tweaks enabled for Razorgore.";
+    bool hasTweaks = false;
+
+    if (SoloRaids::Config::ClearRazorgoreDestroyEggCooldown())
+    {
+        message += " Destroy Egg cooldown removed.";
+        hasTweaks = true;
+    }
+
+    float const castTimePct = SoloRaids::Config::RazorgoreDestroyEggCastSpeedPct();
+    if (castTimePct != 1.0f)
+    {
+        message += " Destroy Egg cast time set to " + std::to_string(uint32(castTimePct * 100.0f)) + "% of normal.";
+        hasTweaks = true;
+    }
+
+    if (!hasTweaks)
+        return;
+
+    player->SendSystemMessage(message.c_str());
     razorgoreSoloAnnouncementSent.insert(guid);
 }
 
@@ -57,22 +87,33 @@ void SetRazorgoreSoloHaste(Creature* creature, bool apply)
         return;
 
     ObjectGuid const guid = creature->GetGUID();
-    bool const alreadyApplied = razorgoreHasteApplied.count(guid) != 0;
+    auto itr = razorgoreHasteApplied.find(guid);
+    bool const alreadyApplied = itr != razorgoreHasteApplied.end();
+    float const castSpeedBonus = GetDestroyEggCastHasteBonusPct();
 
-    if (apply == alreadyApplied)
+    if (!apply || castSpeedBonus <= 0.0f)
+    {
+        if (alreadyApplied)
+        {
+            creature->ApplyCastTimePercentMod(itr->second, false);
+            razorgoreHasteApplied.erase(itr);
+        }
+        return;
+    }
+
+    if (alreadyApplied && itr->second == castSpeedBonus)
         return;
 
-    creature->ApplyCastTimePercentMod(RAZORGORE_SOLO_CAST_SPEED_MOD, apply);
+    if (alreadyApplied)
+        creature->ApplyCastTimePercentMod(itr->second, false);
 
-    if (apply)
-        razorgoreHasteApplied.insert(guid);
-    else
-        razorgoreHasteApplied.erase(guid);
+    creature->ApplyCastTimePercentMod(castSpeedBonus, true);
+    razorgoreHasteApplied[guid] = castSpeedBonus;
 }
 
 void ClearDestroyEggCooldown(Creature* razorgore)
 {
-    if (!razorgore)
+    if (!razorgore || !SoloRaids::Config::ClearRazorgoreDestroyEggCooldown())
         return;
 
     SpellInfo const* spellInfo = sSpellMgr->GetSpellInfo(SPELL_DESTROY_EGG);

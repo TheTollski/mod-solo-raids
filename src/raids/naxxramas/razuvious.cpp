@@ -1,4 +1,5 @@
 #include "../../solo_raid_utils.h"
+#include "../../solo_raid_config.h"
 
 #include "Creature.h"
 #include "Player.h"
@@ -9,6 +10,7 @@
 #include "UnitScript.h"
 
 #include <set>
+#include <string>
 
 namespace
 {
@@ -43,7 +45,26 @@ void AnnounceRazuviousSoloTweaks(Creature* razuvious)
     if (razuviousSoloAnnouncementMaps.count(instanceId) != 0)
         return;
 
-    player->SendSystemMessage("mod-solo-raids active: Naxxramas solo tweaks enabled for Instructor Razuvious. Mana Burn disabled, Unbalancing Strike damage reduced by 50%.");
+    std::string message = "mod-solo-raids active: Naxxramas solo tweaks enabled for Instructor Razuvious.";
+    bool hasTweaks = false;
+
+    if (SoloRaids::Config::DisableRazuviousManaBurn())
+    {
+        message += " Mana Burn disabled.";
+        hasTweaks = true;
+    }
+
+    float const damagePct = SoloRaids::Config::RazuviousUnbalancingStrikeDamagePct();
+    if (damagePct != 1.0f)
+    {
+        message += " Unbalancing Strike damage set to " + std::to_string(uint32(damagePct * 100.0f)) + "%.";
+        hasTweaks = true;
+    }
+
+    if (!hasTweaks)
+        return;
+
+    player->SendSystemMessage(message.c_str());
     razuviousSoloAnnouncementMaps.insert(instanceId);
 }
 }
@@ -78,7 +99,7 @@ public:
 
     void OnSpellCheckCast(Spell* spell, bool /*strict*/, SpellCastResult& result) override
     {
-        if (!spell || result != SPELL_CAST_OK || spell->GetSpellInfo()->Id != SPELL_MANA_BURN)
+        if (!spell || result != SPELL_CAST_OK || spell->GetSpellInfo()->Id != SPELL_MANA_BURN || !SoloRaids::Config::DisableRazuviousManaBurn())
             return;
 
         Unit* caster = spell->GetCaster();
@@ -97,7 +118,7 @@ public:
         if (!target || !source || !spellInfo || spellInfo->Id != SPELL_UNBALANCING_STRIKE || !IsRazuvious(source) || !SoloRaids::IsSoloPlayer(target, SOLO_RAIDS_MAP_NAXXRAMAS))
             return;
 
-        amount /= 2;
+        amount = int32(float(amount) * SoloRaids::Config::RazuviousUnbalancingStrikeDamagePct());
     }
 };
 

@@ -1,4 +1,5 @@
 #include "../../solo_raid_utils.h"
+#include "../../solo_raid_config.h"
 
 #include "Creature.h"
 #include "ObjectGuid.h"
@@ -8,12 +9,12 @@
 #include "SpellInfo.h"
 
 #include <set>
+#include <string>
 
 namespace
 {
 constexpr uint32 NPC_EBONROC = 14601;
 constexpr uint32 SPELL_SHADOW_OF_EBONROC = 23340;
-constexpr int32 SHADOW_OF_EBONROC_SOLO_DURATION = 2000;
 constexpr uint32 SOLO_RAIDS_MAP_BLACKWING_LAIR = 469;
 
 std::set<ObjectGuid> ebonrocSoloAnnouncementSent;
@@ -31,7 +32,8 @@ void AnnounceEbonrocSoloTweaks(Creature* ebonroc)
     if (!player)
         return;
 
-    player->SendSystemMessage("mod-solo-raids active: Blackwing Lair solo tweaks enabled for Ebonroc. Shadow of Ebonroc duration reduced to 2 seconds.");
+    uint32 const durationMs = SoloRaids::Config::EbonrocShadowOfEbonrocDurationMs();
+    player->SendSystemMessage(("mod-solo-raids active: Blackwing Lair solo tweaks enabled for Ebonroc. Shadow of Ebonroc duration set to " + std::to_string(durationMs) + " ms.").c_str());
     ebonrocSoloAnnouncementSent.insert(guid);
 }
 }
@@ -73,7 +75,7 @@ public:
         if (!SoloRaids::IsSoloPlayer(owner, SOLO_RAIDS_MAP_BLACKWING_LAIR))
             return;
 
-        maxDuration = SHADOW_OF_EBONROC_SOLO_DURATION;
+        maxDuration = int32(SoloRaids::Config::EbonrocShadowOfEbonrocDurationMs());
     }
 };
 

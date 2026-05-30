@@ -1,4 +1,5 @@
 #include "../../solo_raid_utils.h"
+#include "../../solo_raid_config.h"
 
 #include "Creature.h"
 #include "ObjectGuid.h"
@@ -29,6 +30,9 @@ void AnnounceVaelastraszSoloTweaks(Creature* vaelastrasz)
 
     Player* player = SoloRaids::GetSoloPlayer(vaelastrasz->GetMap(), SOLO_RAIDS_MAP_BLACKWING_LAIR);
     if (!player)
+        return;
+
+    if (!SoloRaids::Config::DisableVaelastraszBurningAdrenaline())
         return;
 
     player->SendSystemMessage("mod-solo-raids active: Blackwing Lair solo tweaks enabled for Vaelastrasz. Burning Adrenaline disabled.");
@@ -66,7 +70,7 @@ public:
 
     void OnSpellCheckCast(Spell* spell, bool /*strict*/, SpellCastResult& result) override
     {
-        if (!spell || result != SPELL_CAST_OK || spell->GetSpellInfo()->Id != SPELL_BURNING_ADRENALINE)
+        if (!spell || result != SPELL_CAST_OK || spell->GetSpellInfo()->Id != SPELL_BURNING_ADRENALINE || !SoloRaids::Config::DisableVaelastraszBurningAdrenaline())
             return;
 
         Unit* caster = spell->GetCaster();

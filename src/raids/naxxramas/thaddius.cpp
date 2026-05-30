@@ -1,4 +1,5 @@
 #include "../../solo_raid_utils.h"
+#include "../../solo_raid_config.h"
 
 #include "Creature.h"
 #include "ObjectGuid.h"
@@ -42,6 +43,9 @@ void AnnounceThaddiusSoloTweaks(Creature* feugen)
     if (thaddiusSoloAnnouncementMaps.count(instanceId) != 0)
         return;
 
+    if (!SoloRaids::Config::DisableThaddiusStaticFieldManaDrain())
+        return;
+
     player->SendSystemMessage("mod-solo-raids active: Naxxramas solo tweaks enabled for Thaddius. Feugen's Static Field mana drain disabled.");
     thaddiusSoloAnnouncementMaps.insert(instanceId);
 }
@@ -77,7 +81,7 @@ public:
 
     void ModifySpellDamageTaken(Unit* target, Unit* source, int32& amount, SpellInfo const* spellInfo) override
     {
-        if (!target || !source || !spellInfo || spellInfo->Id != SPELL_STATIC_FIELD || !IsFeugen(source) || !SoloRaids::IsSoloPlayer(target, SOLO_RAIDS_MAP_NAXXRAMAS))
+        if (!SoloRaids::Config::DisableThaddiusStaticFieldManaDrain() || !target || !source || !spellInfo || spellInfo->Id != SPELL_STATIC_FIELD || !IsFeugen(source) || !SoloRaids::IsSoloPlayer(target, SOLO_RAIDS_MAP_NAXXRAMAS))
             return;
 
         if (target->GetMaxPower(POWER_MANA) <= 0)

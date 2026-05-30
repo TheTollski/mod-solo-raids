@@ -1,4 +1,5 @@
 #include "../../solo_raid_utils.h"
+#include "../../solo_raid_config.h"
 
 #include "Creature.h"
 #include "ObjectGuid.h"
@@ -41,6 +42,9 @@ void AnnouncePatchwerkSoloTweaks(Creature* patchwerk)
     if (patchwerkSoloAnnouncementMaps.count(instanceId) != 0)
         return;
 
+    if (!SoloRaids::Config::DisablePatchwerkHatefulStrike())
+        return;
+
     player->SendSystemMessage("mod-solo-raids active: Naxxramas solo tweaks enabled for Patchwerk. Hateful Strike disabled.");
     patchwerkSoloAnnouncementMaps.insert(instanceId);
 }
@@ -76,7 +80,7 @@ public:
 
     void OnSpellCheckCast(Spell* spell, bool /*strict*/, SpellCastResult& result) override
     {
-        if (!spell || result != SPELL_CAST_OK || spell->GetSpellInfo()->Id != SPELL_HATEFUL_STRIKE)
+        if (!spell || result != SPELL_CAST_OK || spell->GetSpellInfo()->Id != SPELL_HATEFUL_STRIKE || !SoloRaids::Config::DisablePatchwerkHatefulStrike())
             return;
 
         Unit* caster = spell->GetCaster();
