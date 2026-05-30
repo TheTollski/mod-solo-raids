@@ -32,5 +32,9 @@ Small encounter-specific raid adjustments for solo play.
 ### Patchwerk
 - Patchwerk's Hateful Strike is disabled in a solo raid instance.
 
+### Instructor Razuvious
+- Instructor Razuvious's Mana Burn is disabled in a solo raid instance.
+- Instructor Razuvious's Unbalancing Strike damage is reduced by 50% against the solo player.
+
 ### Thaddius
 - Feugen's Static Field mana drain is disabled for the solo player.
