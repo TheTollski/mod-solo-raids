@@ -32,6 +32,9 @@ Small encounter-specific raid adjustments for solo play.
 ### Patchwerk
 - Patchwerk's Hateful Strike is disabled in a solo raid instance.
 
+### Kel'Thuzad
+- Kel'Thuzad's Guardian of Icecrown spawns are capped at 2 in a solo raid instance.
+
 ### Instructor Razuvious
 - Instructor Razuvious's Mana Burn is disabled in a solo raid instance.
 - Instructor Razuvious's Unbalancing Strike damage is reduced by 50% against the solo player.
