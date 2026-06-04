@@ -36,7 +36,7 @@ Percentage options use fractional values, so `0.5` means 50%.
 - Gluth's Mortal Wound stack cap is configurable on the solo player.
 
 ### Patchwerk
-- Patchwerk's Hateful Strike can be disabled in a solo raid instance.
+- Patchwerk's Hateful Strike damage percentage is configurable against the solo player.
 
 ### Kel'Thuzad
 - Kel'Thuzad's Guardian of Icecrown active spawn cap is configurable in a solo raid instance.

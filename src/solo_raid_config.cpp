@@ -45,9 +45,9 @@ bool DisableTwinEmperorsHealBrother()
     return sConfigMgr->GetOption<bool>("SoloRaids.TempleOfAhnQiraj.TwinEmperors.DisableHealBrother", true);
 }
 
-bool DisablePatchwerkHatefulStrike()
+float PatchwerkHatefulStrikeDamagePct()
 {
-    return sConfigMgr->GetOption<bool>("SoloRaids.Naxxramas.Patchwerk.DisableHatefulStrike", true);
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.Naxxramas.Patchwerk.HatefulStrike.DamagePct", 0.5f), 0.0f, 10.0f);
 }
 
 bool DisableGluthZombieHealing()

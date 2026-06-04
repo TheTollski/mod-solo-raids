@@ -5,11 +5,12 @@
 #include "ObjectGuid.h"
 #include "Player.h"
 #include "ScriptMgr.h"
-#include "Spell.h"
 #include "SpellInfo.h"
 #include "SharedDefines.h"
+#include "UnitScript.h"
 
 #include <set>
+#include <string>
 
 namespace
 {
@@ -42,10 +43,12 @@ void AnnouncePatchwerkSoloTweaks(Creature* patchwerk)
     if (patchwerkSoloAnnouncementMaps.count(instanceId) != 0)
         return;
 
-    if (!SoloRaids::Config::DisablePatchwerkHatefulStrike())
+    float const damagePct = SoloRaids::Config::PatchwerkHatefulStrikeDamagePct();
+    if (damagePct == 1.0f)
         return;
 
-    player->SendSystemMessage("mod-solo-raids active: Naxxramas solo tweaks enabled for Patchwerk. Hateful Strike disabled.");
+    std::string message = "mod-solo-raids active: Naxxramas solo tweaks enabled for Patchwerk. Hateful Strike damage set to " + std::to_string(uint32(damagePct * 100.0f)) + "%.";
+    player->SendSystemMessage(message.c_str());
     patchwerkSoloAnnouncementMaps.insert(instanceId);
 }
 }
@@ -73,24 +76,22 @@ public:
     }
 };
 
-class PatchwerkSoloRaidSpellScript : public AllSpellScript
+class PatchwerkSoloRaidUnitScript : public UnitScript
 {
 public:
-    PatchwerkSoloRaidSpellScript() : AllSpellScript("PatchwerkSoloRaidSpellScript", { ALLSPELLHOOK_ON_SPELL_CHECK_CAST }) { }
+    PatchwerkSoloRaidUnitScript() : UnitScript("PatchwerkSoloRaidUnitScript", true, { UNITHOOK_MODIFY_SPELL_DAMAGE_TAKEN }) { }
 
-    void OnSpellCheckCast(Spell* spell, bool /*strict*/, SpellCastResult& result) override
+    void ModifySpellDamageTaken(Unit* target, Unit* source, int32& amount, SpellInfo const* spellInfo) override
     {
-        if (!spell || result != SPELL_CAST_OK || spell->GetSpellInfo()->Id != SPELL_HATEFUL_STRIKE || !SoloRaids::Config::DisablePatchwerkHatefulStrike())
+        if (!target || !source || !spellInfo || spellInfo->Id != SPELL_HATEFUL_STRIKE || !IsPatchwerk(source) || !SoloRaids::IsSoloPlayer(target, SOLO_RAIDS_MAP_NAXXRAMAS))
             return;
 
-        Unit* caster = spell->GetCaster();
-        if (IsPatchwerk(caster) && SoloRaids::IsSoloMap(caster->GetMap(), SOLO_RAIDS_MAP_NAXXRAMAS))
-            result = SPELL_FAILED_DONT_REPORT;
+        amount = int32(float(amount) * SoloRaids::Config::PatchwerkHatefulStrikeDamagePct());
     }
 };
 
 void AddPatchwerkSoloRaidScripts()
 {
     new PatchwerkSoloRaidCreatureScript();
-    new PatchwerkSoloRaidSpellScript();
+    new PatchwerkSoloRaidUnitScript();
 }

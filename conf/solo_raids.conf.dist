@@ -41,9 +41,10 @@ SoloRaids.TempleOfAhnQiraj.TwinEmperors.DisableHealBrother = 1
 # Naxxramas
 #
 
-# Disable Patchwerk's Hateful Strike in solo Naxxramas.
-# Default: 1
-SoloRaids.Naxxramas.Patchwerk.DisableHatefulStrike = 1
+# Patchwerk Hateful Strike damage percentage against the solo player.
+# 0.5 means 50% of normal damage.
+# Default: 0.5
+SoloRaids.Naxxramas.Patchwerk.HatefulStrike.DamagePct = 0.5
 
 # Disable Gluth's zombie healing in solo Naxxramas.
 # Default: 1

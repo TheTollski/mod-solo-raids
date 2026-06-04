@@ -14,7 +14,7 @@ bool DisableChromaggusTimeLapse();
 
 bool DisableTwinEmperorsHealBrother();
 
-bool DisablePatchwerkHatefulStrike();
+float PatchwerkHatefulStrikeDamagePct();
 bool DisableGluthZombieHealing();
 uint8 GluthMortalWoundMaxStacks();
 bool DisableThaddiusStaticFieldManaDrain();
