@@ -60,6 +60,11 @@ uint8 GluthMortalWoundMaxStacks()
     return ClampConfig(sConfigMgr->GetOption<uint8>("SoloRaids.Naxxramas.Gluth.MortalWound.MaxStacks", 3), uint8(0), uint8(255));
 }
 
+float GluthEnrageDurationPct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.Naxxramas.Gluth.Enrage.DurationPct", 0.5f), 0.0f, 10.0f);
+}
+
 bool DisableThaddiusStaticFieldManaDrain()
 {
     return sConfigMgr->GetOption<bool>("SoloRaids.Naxxramas.Thaddius.DisableStaticFieldManaDrain", true);

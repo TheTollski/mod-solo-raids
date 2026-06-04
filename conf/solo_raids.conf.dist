@@ -54,6 +54,11 @@ SoloRaids.Naxxramas.Gluth.DisableZombieHealing = 1
 # Default: 3
 SoloRaids.Naxxramas.Gluth.MortalWound.MaxStacks = 3
 
+# Gluth Enrage duration percentage in solo Naxxramas.
+# 0.5 means 50% of normal duration.
+# Default: 0.5
+SoloRaids.Naxxramas.Gluth.Enrage.DurationPct = 0.5
+
 # Disable Feugen's Static Field mana drain in solo Naxxramas.
 # Default: 1
 SoloRaids.Naxxramas.Thaddius.DisableStaticFieldManaDrain = 1

@@ -17,6 +17,7 @@ bool DisableTwinEmperorsHealBrother();
 float PatchwerkHatefulStrikeDamagePct();
 bool DisableGluthZombieHealing();
 uint8 GluthMortalWoundMaxStacks();
+float GluthEnrageDurationPct();
 bool DisableThaddiusStaticFieldManaDrain();
 bool DisableRazuviousManaBurn();
 float RazuviousUnbalancingStrikeDamagePct();

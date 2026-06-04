@@ -19,6 +19,7 @@ constexpr uint32 NPC_GLUTH_40 = 351004;
 constexpr uint32 NPC_ZOMBIE_CHOW = 16360;
 constexpr uint32 NPC_ZOMBIE_CHOW_40 = 351069;
 constexpr uint32 SPELL_MORTAL_WOUND = 25646;
+constexpr uint32 SPELL_ENRAGE = 28371;
 constexpr uint32 SOLO_RAIDS_MAP_NAXXRAMAS = 533;
 
 std::set<uint32> gluthSoloAnnouncementMaps;
@@ -60,6 +61,11 @@ void AnnounceGluthSoloTweaks(Creature* gluth)
         message += " Zombie healing disabled.";
 
     message += " Mortal Wound capped at " + std::to_string(uint32(SoloRaids::Config::GluthMortalWoundMaxStacks())) + " stacks.";
+
+    float const enrageDurationPct = SoloRaids::Config::GluthEnrageDurationPct();
+    if (enrageDurationPct != 1.0f)
+        message += " Enrage duration set to " + std::to_string(uint32(enrageDurationPct * 100.0f)) + "%.";
+
     player->SendSystemMessage(message.c_str());
     gluthSoloAnnouncementMaps.insert(instanceId);
 }
@@ -96,12 +102,26 @@ public:
 
     void OnAuraApply(Unit* unit, Aura* aura) override
     {
-        if (!unit || !aura || aura->GetId() != SPELL_MORTAL_WOUND || !SoloRaids::IsSoloPlayer(unit, SOLO_RAIDS_MAP_NAXXRAMAS))
+        if (!unit || !aura)
             return;
 
-        uint8 const maxStacks = SoloRaids::Config::GluthMortalWoundMaxStacks();
-        if (aura->GetStackAmount() > maxStacks)
-            aura->SetStackAmount(maxStacks);
+        if (aura->GetId() == SPELL_MORTAL_WOUND && SoloRaids::IsSoloPlayer(unit, SOLO_RAIDS_MAP_NAXXRAMAS))
+        {
+            uint8 const maxStacks = SoloRaids::Config::GluthMortalWoundMaxStacks();
+            if (aura->GetStackAmount() > maxStacks)
+                aura->SetStackAmount(maxStacks);
+        }
+
+        if (aura->GetId() == SPELL_ENRAGE && IsGluth(unit) && SoloRaids::IsSoloMap(unit->GetMap(), SOLO_RAIDS_MAP_NAXXRAMAS))
+        {
+            float const durationPct = SoloRaids::Config::GluthEnrageDurationPct();
+            if (durationPct == 1.0f || aura->GetMaxDuration() <= 0)
+                return;
+
+            int32 const duration = int32(float(aura->GetMaxDuration()) * durationPct);
+            aura->SetMaxDuration(duration);
+            aura->SetDuration(duration);
+        }
     }
 
     void OnUnitDeath(Unit* unit, Unit* killer) override

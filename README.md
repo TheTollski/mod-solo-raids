@@ -34,6 +34,7 @@ Percentage options use fractional values, so `0.5` means 50%.
 ### Gluth
 - Gluth's zombie healing can be disabled in a solo raid instance.
 - Gluth's Mortal Wound stack cap is configurable on the solo player.
+- Gluth's Enrage duration percentage is configurable in a solo raid instance.
 
 ### Patchwerk
 - Patchwerk's Hateful Strike damage percentage is configurable against the solo player.
