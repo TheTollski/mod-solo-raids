@@ -5,6 +5,9 @@
 
 namespace SoloRaids::Config
 {
+bool DisableTemporusHasten();
+bool DisableAeonusThrash();
+
 bool ClearRazorgoreDestroyEggCooldown();
 float RazorgoreDestroyEggCastSpeedPct();
 
@@ -22,6 +25,8 @@ bool DisableThaddiusStaticFieldManaDrain();
 bool DisableRazuviousManaBurn();
 float RazuviousUnbalancingStrikeDamagePct();
 uint32 KelThuzadGuardianOfIcecrownMaxActive();
+
+bool DisableNetherspitePortalBuffs();
 }
 
 #endif

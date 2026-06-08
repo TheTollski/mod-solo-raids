@@ -15,6 +15,16 @@ T ClampConfig(T value, T minValue, T maxValue)
 
 namespace SoloRaids::Config
 {
+bool DisableTemporusHasten()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.BlackMorass.Temporus.DisableHasten", true);
+}
+
+bool DisableAeonusThrash()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.BlackMorass.Aeonus.DisableThrash", true);
+}
+
 bool ClearRazorgoreDestroyEggCooldown()
 {
     return sConfigMgr->GetOption<bool>("SoloRaids.BlackwingLair.Razorgore.DestroyEgg.ClearCooldown", true);
@@ -83,5 +93,10 @@ float RazuviousUnbalancingStrikeDamagePct()
 uint32 KelThuzadGuardianOfIcecrownMaxActive()
 {
     return ClampConfig(sConfigMgr->GetOption<uint32>("SoloRaids.Naxxramas.KelThuzad.GuardianOfIcecrown.MaxActive", 2), uint32(0), uint32(100));
+}
+
+bool DisableNetherspitePortalBuffs()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.Karazhan.Netherspite.DisablePortalBuffs", true);
 }
 }

@@ -4,6 +4,24 @@
 # Copy this file to solo_raids.conf and restart or reload config.
 #
 
+# TBC Dungeons
+# -----------------------------------------------------------------------------
+
+#
+# Black Morass
+#
+
+# Disable Temporus's Hasten in solo Black Morass.
+# Default: 1
+SoloRaids.BlackMorass.Temporus.DisableHasten = 1
+
+# Disable Aeonus's Thrash in solo Black Morass.
+# Default: 1
+SoloRaids.BlackMorass.Aeonus.DisableThrash = 1
+
+# Raids
+# -----------------------------------------------------------------------------
+
 #
 # Blackwing Lair
 #
@@ -75,3 +93,12 @@ SoloRaids.Naxxramas.Razuvious.UnbalancingStrike.DamagePct = 0.5
 # Maximum active Guardian of Icecrown spawns during Kel'Thuzad in solo Naxxramas.
 # Default: 2
 SoloRaids.Naxxramas.KelThuzad.GuardianOfIcecrown.MaxActive = 2
+
+#
+# Karazhan
+#
+
+# Disable portal beam buffs on Netherspite in solo Karazhan.
+# Player portal beam buffs and exhaustion remain unchanged.
+# Default: 1
+SoloRaids.Karazhan.Netherspite.DisablePortalBuffs = 1
