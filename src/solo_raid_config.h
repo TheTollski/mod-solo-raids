@@ -27,6 +27,8 @@ float RazuviousUnbalancingStrikeDamagePct();
 uint32 KelThuzadGuardianOfIcecrownMaxActive();
 
 bool DisableNetherspitePortalBuffs();
+bool MagtheridonOneCubeBanish();
+bool DisableMagtheridonBurningAbyssal();
 }
 
 #endif

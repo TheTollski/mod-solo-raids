@@ -99,4 +99,14 @@ bool DisableNetherspitePortalBuffs()
 {
     return sConfigMgr->GetOption<bool>("SoloRaids.Karazhan.Netherspite.DisablePortalBuffs", true);
 }
+
+bool MagtheridonOneCubeBanish()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.MagtheridonsLair.Magtheridon.OneCubeBanish", true);
+}
+
+bool DisableMagtheridonBurningAbyssal()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.MagtheridonsLair.Magtheridon.DisableBurningAbyssal", true);
+}
 }

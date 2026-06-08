@@ -102,3 +102,15 @@ SoloRaids.Naxxramas.KelThuzad.GuardianOfIcecrown.MaxActive = 2
 # Player portal beam buffs and exhaustion remain unchanged.
 # Default: 1
 SoloRaids.Karazhan.Netherspite.DisablePortalBuffs = 1
+
+#
+# Magtheridon's Lair
+#
+
+# Allow one Manticron Cube channel to banish Magtheridon in solo Magtheridon's Lair.
+# Default: 1
+SoloRaids.MagtheridonsLair.Magtheridon.OneCubeBanish = 1
+
+# Disable Hellfire Channelers' Burning Abyssal summon in solo Magtheridon's Lair.
+# Default: 1
+SoloRaids.MagtheridonsLair.Magtheridon.DisableBurningAbyssal = 1

@@ -3,6 +3,7 @@ void AddChromaggusSoloRaidScripts();
 void AddEbonrocSoloRaidScripts();
 void AddGluthSoloRaidScripts();
 void AddKelThuzadSoloRaidScripts();
+void AddMagtheridonSoloRaidScripts();
 void AddNetherspiteSoloRaidScripts();
 void AddPatchwerkSoloRaidScripts();
 void AddRazorgoreTheUntamedSoloRaidScripts();
@@ -19,6 +20,7 @@ void Addmod_solo_raidsScripts()
     AddEbonrocSoloRaidScripts();
     AddGluthSoloRaidScripts();
     AddKelThuzadSoloRaidScripts();
+    AddMagtheridonSoloRaidScripts();
     AddNetherspiteSoloRaidScripts();
     AddPatchwerkSoloRaidScripts();
     AddRazorgoreTheUntamedSoloRaidScripts();

@@ -67,3 +67,9 @@ Percentage options use fractional values, so `0.5` means 50%.
 
 #### Netherspite
 - Netherspite's portal beam buffs can be disabled while player beam buffs and exhaustion remain unchanged.
+
+### Magtheridon's Lair
+
+#### Magtheridon
+- One Manticron Cube channel can be sufficient to banish Magtheridon in a solo raid instance.
+- Hellfire Channelers' Burning Abyssal summon can be disabled in a solo raid instance.
