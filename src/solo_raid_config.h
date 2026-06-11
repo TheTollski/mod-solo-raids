@@ -29,6 +29,12 @@ uint32 KelThuzadGuardianOfIcecrownMaxActive();
 bool DisableNetherspitePortalBuffs();
 bool MagtheridonOneCubeBanish();
 bool DisableMagtheridonBurningAbyssal();
+
+float HighKingMaulgarBlindeyeHealingPct();
+uint32 HighKingMaulgarOlmMaxFelhounds();
+
+bool DisableKarathressLeechingThrow();
+bool DisableKarathressSummonCyclone();
 }
 
 #endif

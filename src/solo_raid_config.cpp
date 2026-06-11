@@ -109,4 +109,24 @@ bool DisableMagtheridonBurningAbyssal()
 {
     return sConfigMgr->GetOption<bool>("SoloRaids.MagtheridonsLair.Magtheridon.DisableBurningAbyssal", true);
 }
+
+float HighKingMaulgarBlindeyeHealingPct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.GruulsLair.HighKingMaulgar.Blindeye.HealingPct", 0.25f), 0.0f, 10.0f);
+}
+
+uint32 HighKingMaulgarOlmMaxFelhounds()
+{
+    return ClampConfig(sConfigMgr->GetOption<uint32>("SoloRaids.GruulsLair.HighKingMaulgar.Olm.MaxFelhounds", 1), uint32(0), uint32(100));
+}
+
+bool DisableKarathressLeechingThrow()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.SerpentshrineCavern.FathomLordKarathress.DisableLeechingThrow", true);
+}
+
+bool DisableKarathressSummonCyclone()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.SerpentshrineCavern.FathomLordKarathress.DisableSummonCyclone", true);
+}
 }

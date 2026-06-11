@@ -73,3 +73,15 @@ Percentage options use fractional values, so `0.5` means 50%.
 #### Magtheridon
 - One Manticron Cube channel can be sufficient to banish Magtheridon in a solo raid instance.
 - Hellfire Channelers' Burning Abyssal summon can be disabled in a solo raid instance.
+
+### Gruul's Lair
+
+#### High King Maulgar
+- Blindeye the Seer's healing percentage is configurable in a solo raid instance.
+- The number of active felhounds summoned by Olm is configurable in a solo raid instance.
+
+### Serpentshrine Cavern
+
+#### Fathom-Lord Karathress
+- Fathom-Guard Sharkkis's Leeching Throw can be disabled in a solo raid instance.
+- Fathom-Guard Caribdis's Summon Cyclone can be disabled in a solo raid instance.

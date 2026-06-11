@@ -1,7 +1,9 @@
 void AddAeonusSoloRaidScripts();
 void AddChromaggusSoloRaidScripts();
 void AddEbonrocSoloRaidScripts();
+void AddFathomLordKarathressSoloRaidScripts();
 void AddGluthSoloRaidScripts();
+void AddHighKingMaulgarSoloRaidScripts();
 void AddKelThuzadSoloRaidScripts();
 void AddMagtheridonSoloRaidScripts();
 void AddNetherspiteSoloRaidScripts();
@@ -18,7 +20,9 @@ void Addmod_solo_raidsScripts()
     AddAeonusSoloRaidScripts();
     AddChromaggusSoloRaidScripts();
     AddEbonrocSoloRaidScripts();
+    AddFathomLordKarathressSoloRaidScripts();
     AddGluthSoloRaidScripts();
+    AddHighKingMaulgarSoloRaidScripts();
     AddKelThuzadSoloRaidScripts();
     AddMagtheridonSoloRaidScripts();
     AddNetherspiteSoloRaidScripts();
