@@ -141,3 +141,8 @@ SoloRaids.SerpentshrineCavern.FathomLordKarathress.DisableLeechingThrow = 1
 # in solo Serpentshrine Cavern.
 # Default: 1
 SoloRaids.SerpentshrineCavern.FathomLordKarathress.DisableSummonCyclone = 1
+
+# Morogrim Tidewalker's Tidal Wave debuff duration percentage in solo
+# Serpentshrine Cavern. 0.25 means 25% of normal duration.
+# Default: 0.25
+SoloRaids.SerpentshrineCavern.MorogrimTidewalker.TidalWave.DurationPct = 0.25

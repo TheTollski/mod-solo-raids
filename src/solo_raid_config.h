@@ -35,6 +35,7 @@ uint32 HighKingMaulgarOlmMaxFelhounds();
 
 bool DisableKarathressLeechingThrow();
 bool DisableKarathressSummonCyclone();
+float MorogrimTidalWaveDurationPct();
 }
 
 #endif

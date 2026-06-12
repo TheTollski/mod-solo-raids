@@ -85,3 +85,6 @@ Percentage options use fractional values, so `0.5` means 50%.
 #### Fathom-Lord Karathress
 - Fathom-Guard Sharkkis's Leeching Throw can be disabled in a solo raid instance.
 - Fathom-Guard Caribdis's Summon Cyclone can be disabled in a solo raid instance.
+
+#### Morogrim Tidewalker
+- Tidal Wave's debuff duration percentage is configurable on the solo player.

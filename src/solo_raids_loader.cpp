@@ -6,6 +6,7 @@ void AddGluthSoloRaidScripts();
 void AddHighKingMaulgarSoloRaidScripts();
 void AddKelThuzadSoloRaidScripts();
 void AddMagtheridonSoloRaidScripts();
+void AddMorogrimTidewalkerSoloRaidScripts();
 void AddNetherspiteSoloRaidScripts();
 void AddPatchwerkSoloRaidScripts();
 void AddRazorgoreTheUntamedSoloRaidScripts();
@@ -25,6 +26,7 @@ void Addmod_solo_raidsScripts()
     AddHighKingMaulgarSoloRaidScripts();
     AddKelThuzadSoloRaidScripts();
     AddMagtheridonSoloRaidScripts();
+    AddMorogrimTidewalkerSoloRaidScripts();
     AddNetherspiteSoloRaidScripts();
     AddPatchwerkSoloRaidScripts();
     AddRazorgoreTheUntamedSoloRaidScripts();

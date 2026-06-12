@@ -129,4 +129,9 @@ bool DisableKarathressSummonCyclone()
 {
     return sConfigMgr->GetOption<bool>("SoloRaids.SerpentshrineCavern.FathomLordKarathress.DisableSummonCyclone", true);
 }
+
+float MorogrimTidalWaveDurationPct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.SerpentshrineCavern.MorogrimTidewalker.TidalWave.DurationPct", 0.25f), 0.0f, 10.0f);
+}
 }
