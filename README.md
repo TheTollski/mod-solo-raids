@@ -88,3 +88,9 @@ Percentage options use fractional values, so `0.5` means 50%.
 
 #### Morogrim Tidewalker
 - Tidal Wave's debuff duration percentage is configurable on the solo player.
+
+#### Lady Vashj
+- Tainted Core's Paralyze effect can be disabled in a solo raid instance.
+- Tainted Elementals can be prevented from despawning, and their Poison Bolt range is configurable.
+- The number of active Enchanted Elementals is configurable in a solo raid instance.
+- Toxic Sporebats have a configurable minimum spawn interval in a solo raid instance.

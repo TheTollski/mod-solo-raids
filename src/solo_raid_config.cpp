@@ -134,4 +134,29 @@ float MorogrimTidalWaveDurationPct()
 {
     return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.SerpentshrineCavern.MorogrimTidewalker.TidalWave.DurationPct", 0.25f), 0.0f, 10.0f);
 }
+
+bool DisableLadyVashjTaintedCoreParalyze()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.SerpentshrineCavern.LadyVashj.DisableTaintedCoreParalyze", true);
+}
+
+bool PreventLadyVashjTaintedElementalDespawn()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.SerpentshrineCavern.LadyVashj.PreventTaintedElementalDespawn", true);
+}
+
+float LadyVashjTaintedElementalPoisonBoltRange()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.SerpentshrineCavern.LadyVashj.TaintedElemental.PoisonBoltRange", 60.0f), 0.0f, 50000.0f);
+}
+
+uint32 LadyVashjEnchantedElementalMaxActive()
+{
+    return ClampConfig(sConfigMgr->GetOption<uint32>("SoloRaids.SerpentshrineCavern.LadyVashj.EnchantedElemental.MaxActive", 3), uint32(0), uint32(100));
+}
+
+uint32 LadyVashjSporebatMinSpawnIntervalMs()
+{
+    return ClampConfig(sConfigMgr->GetOption<uint32>("SoloRaids.SerpentshrineCavern.LadyVashj.Sporebat.MinSpawnIntervalMs", 30000), uint32(0), uint32(600000));
+}
 }

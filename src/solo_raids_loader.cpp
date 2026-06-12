@@ -5,6 +5,7 @@ void AddFathomLordKarathressSoloRaidScripts();
 void AddGluthSoloRaidScripts();
 void AddHighKingMaulgarSoloRaidScripts();
 void AddKelThuzadSoloRaidScripts();
+void AddLadyVashjSoloRaidScripts();
 void AddMagtheridonSoloRaidScripts();
 void AddMorogrimTidewalkerSoloRaidScripts();
 void AddNetherspiteSoloRaidScripts();
@@ -25,6 +26,7 @@ void Addmod_solo_raidsScripts()
     AddGluthSoloRaidScripts();
     AddHighKingMaulgarSoloRaidScripts();
     AddKelThuzadSoloRaidScripts();
+    AddLadyVashjSoloRaidScripts();
     AddMagtheridonSoloRaidScripts();
     AddMorogrimTidewalkerSoloRaidScripts();
     AddNetherspiteSoloRaidScripts();

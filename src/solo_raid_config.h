@@ -36,6 +36,11 @@ uint32 HighKingMaulgarOlmMaxFelhounds();
 bool DisableKarathressLeechingThrow();
 bool DisableKarathressSummonCyclone();
 float MorogrimTidalWaveDurationPct();
+bool DisableLadyVashjTaintedCoreParalyze();
+bool PreventLadyVashjTaintedElementalDespawn();
+float LadyVashjTaintedElementalPoisonBoltRange();
+uint32 LadyVashjEnchantedElementalMaxActive();
+uint32 LadyVashjSporebatMinSpawnIntervalMs();
 }
 
 #endif

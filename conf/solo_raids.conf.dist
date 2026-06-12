@@ -146,3 +146,27 @@ SoloRaids.SerpentshrineCavern.FathomLordKarathress.DisableSummonCyclone = 1
 # Serpentshrine Cavern. 0.25 means 25% of normal duration.
 # Default: 0.25
 SoloRaids.SerpentshrineCavern.MorogrimTidewalker.TidalWave.DurationPct = 0.25
+
+# Disable Tainted Core's Paralyze effect in solo Serpentshrine Cavern.
+# Default: 1
+SoloRaids.SerpentshrineCavern.LadyVashj.DisableTaintedCoreParalyze = 1
+
+# Prevent Tainted Elementals from despawning after 15 seconds during Lady Vashj
+# in solo Serpentshrine Cavern.
+# Default: 1
+SoloRaids.SerpentshrineCavern.LadyVashj.PreventTaintedElementalDespawn = 1
+
+# Maximum range in yards for Tainted Elemental's Poison Bolt during Lady Vashj
+# in solo Serpentshrine Cavern.
+# Default: 60
+SoloRaids.SerpentshrineCavern.LadyVashj.TaintedElemental.PoisonBoltRange = 60
+
+# Maximum active Enchanted Elementals during Lady Vashj in solo
+# Serpentshrine Cavern.
+# Default: 3
+SoloRaids.SerpentshrineCavern.LadyVashj.EnchantedElemental.MaxActive = 3
+
+# Minimum time in milliseconds between Toxic Sporebat summons during Lady
+# Vashj in solo Serpentshrine Cavern.
+# Default: 30000
+SoloRaids.SerpentshrineCavern.LadyVashj.Sporebat.MinSpawnIntervalMs = 30000
