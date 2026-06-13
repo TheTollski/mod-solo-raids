@@ -159,4 +159,19 @@ uint32 LadyVashjSporebatMinSpawnIntervalMs()
 {
     return ClampConfig(sConfigMgr->GetOption<uint32>("SoloRaids.SerpentshrineCavern.LadyVashj.Sporebat.MinSpawnIntervalMs", 30000), uint32(0), uint32(600000));
 }
+
+bool DisableKaelthasRemoteToy()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.TempestKeep.KaelthasSunstrider.DisableRemoteToy", true);
+}
+
+bool DisableKaelthasInfinityBladesThrash()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.TempestKeep.KaelthasSunstrider.DisableInfinityBladesThrash", true);
+}
+
+bool DisableKaelthasDevastationWhirlwind()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.TempestKeep.KaelthasSunstrider.DisableDevastationWhirlwind", true);
+}
 }

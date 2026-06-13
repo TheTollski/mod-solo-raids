@@ -94,3 +94,10 @@ Percentage options use fractional values, so `0.5` means 50%.
 - Tainted Elementals can be prevented from despawning, and their Poison Bolt range is configurable.
 - The number of active Enchanted Elementals is configurable in a solo raid instance.
 - Toxic Sporebats have a configurable minimum spawn interval in a solo raid instance.
+
+### Tempest Keep
+
+#### Kael'thas Sunstrider
+- Master Engineer Telonicus's Remote Toy can be disabled in a solo raid instance.
+- Infinity Blades' Thrash can be disabled in a solo raid instance.
+- Devastation's Whirlwind can be disabled in a solo raid instance.

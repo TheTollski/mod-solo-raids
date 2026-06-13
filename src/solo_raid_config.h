@@ -41,6 +41,10 @@ bool PreventLadyVashjTaintedElementalDespawn();
 float LadyVashjTaintedElementalPoisonBoltRange();
 uint32 LadyVashjEnchantedElementalMaxActive();
 uint32 LadyVashjSporebatMinSpawnIntervalMs();
+
+bool DisableKaelthasRemoteToy();
+bool DisableKaelthasInfinityBladesThrash();
+bool DisableKaelthasDevastationWhirlwind();
 }
 
 #endif

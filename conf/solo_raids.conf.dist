@@ -170,3 +170,22 @@ SoloRaids.SerpentshrineCavern.LadyVashj.EnchantedElemental.MaxActive = 3
 # Vashj in solo Serpentshrine Cavern.
 # Default: 30000
 SoloRaids.SerpentshrineCavern.LadyVashj.Sporebat.MinSpawnIntervalMs = 30000
+
+#
+# Tempest Keep
+#
+
+# Disable Master Engineer Telonicus's Remote Toy during Kael'thas Sunstrider
+# in solo Tempest Keep.
+# Default: 1
+SoloRaids.TempestKeep.KaelthasSunstrider.DisableRemoteToy = 1
+
+# Disable Infinity Blades' Thrash during Kael'thas Sunstrider in solo
+# Tempest Keep.
+# Default: 1
+SoloRaids.TempestKeep.KaelthasSunstrider.DisableInfinityBladesThrash = 1
+
+# Disable Devastation's Whirlwind during Kael'thas Sunstrider in solo
+# Tempest Keep.
+# Default: 1
+SoloRaids.TempestKeep.KaelthasSunstrider.DisableDevastationWhirlwind = 1
