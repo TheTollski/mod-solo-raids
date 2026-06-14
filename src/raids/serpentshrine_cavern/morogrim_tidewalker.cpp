@@ -65,7 +65,7 @@ public:
 
     void OnCalcMaxDuration(Aura const* aura, int32& maxDuration) override
     {
-        if (!aura || aura->GetId() != SPELL_TIDAL_WAVE || maxDuration <= 0 ||
+        if (!aura || aura->GetType() != UNIT_AURA_TYPE || aura->GetId() != SPELL_TIDAL_WAVE || maxDuration <= 0 ||
             !SoloRaids::IsSoloPlayer(aura->GetUnitOwner(), SOLO_RAIDS_MAP_SERPENTSHRINE_CAVERN))
             return;
 

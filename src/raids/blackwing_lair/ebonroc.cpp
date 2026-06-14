@@ -68,7 +68,7 @@ public:
 
     void OnCalcMaxDuration(Aura const* aura, int32& maxDuration) override
     {
-        if (!aura || aura->GetId() != SPELL_SHADOW_OF_EBONROC)
+        if (!aura || aura->GetType() != UNIT_AURA_TYPE || aura->GetId() != SPELL_SHADOW_OF_EBONROC)
             return;
 
         Unit const* owner = aura->GetUnitOwner();

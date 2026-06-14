@@ -83,7 +83,8 @@ public:
 
     void OnCalcMaxDuration(Aura const* aura, int32& maxDuration) override
     {
-        if (!aura || maxDuration <= 0 ||
+        if (!aura || aura->GetType() != UNIT_AURA_TYPE || maxDuration <= 0 ||
+            (aura->GetId() != SPELL_MARK_OF_KAZROGAL && aura->GetId() != SPELL_CRIPPLE) ||
             !SoloRaids::IsSoloPlayer(aura->GetUnitOwner(), SOLO_RAIDS_MAP_MOUNT_HYJAL))
             return;
 
