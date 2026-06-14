@@ -204,4 +204,9 @@ float KazrogalCrippleDurationPct()
 {
     return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.MountHyjal.Kazrogal.Cripple.DurationPct", 0.5f), 0.0f, 10.0f);
 }
+
+float NajentusTidalShieldDurationPct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.BlackTemple.Najentus.TidalShield.DurationPct", 0.25f), 0.0f, 10.0f);
+}
 }

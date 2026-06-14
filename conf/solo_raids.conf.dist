@@ -221,3 +221,12 @@ SoloRaids.MountHyjal.Kazrogal.Mark.DurationPct = 0.25
 # 0.5 means 50% of normal duration.
 # Default: 0.5
 SoloRaids.MountHyjal.Kazrogal.Cripple.DurationPct = 0.5
+
+#
+# Black Temple
+#
+
+# High Warlord Naj'entus's Tidal Shield duration percentage in solo Black
+# Temple. 0.25 means 25% of normal duration.
+# Default: 0.25
+SoloRaids.BlackTemple.Najentus.TidalShield.DurationPct = 0.25

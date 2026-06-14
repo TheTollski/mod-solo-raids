@@ -52,6 +52,8 @@ bool DisableMountHyjalManaBurn();
 bool PreventMountHyjalGargoyleSpawns();
 float KazrogalMarkDurationPct();
 float KazrogalCrippleDurationPct();
+
+float NajentusTidalShieldDurationPct();
 }
 
 #endif

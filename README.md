@@ -113,3 +113,8 @@ Percentage options use fractional values, so `0.5` means 50%.
 #### Kaz'rogal
 - Mark of Kaz'rogal's duration percentage is configurable on the solo player.
 - Cripple's debuff duration percentage is configurable on the solo player.
+
+### Black Temple
+
+#### High Warlord Naj'entus
+- Tidal Shield's duration percentage is configurable in a solo raid instance.

@@ -4,6 +4,7 @@ void AddEbonrocSoloRaidScripts();
 void AddFathomLordKarathressSoloRaidScripts();
 void AddGluthSoloRaidScripts();
 void AddHighKingMaulgarSoloRaidScripts();
+void AddHighWarlordNajentusSoloRaidScripts();
 void AddKelThuzadSoloRaidScripts();
 void AddKaelthasSunstriderSoloRaidScripts();
 void AddKazrogalSoloRaidScripts();
@@ -28,6 +29,7 @@ void Addmod_solo_raidsScripts()
     AddFathomLordKarathressSoloRaidScripts();
     AddGluthSoloRaidScripts();
     AddHighKingMaulgarSoloRaidScripts();
+    AddHighWarlordNajentusSoloRaidScripts();
     AddKelThuzadSoloRaidScripts();
     AddKaelthasSunstriderSoloRaidScripts();
     AddKazrogalSoloRaidScripts();
