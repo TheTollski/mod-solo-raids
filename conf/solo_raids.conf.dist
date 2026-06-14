@@ -189,3 +189,35 @@ SoloRaids.TempestKeep.KaelthasSunstrider.DisableInfinityBladesThrash = 1
 # Tempest Keep.
 # Default: 1
 SoloRaids.TempestKeep.KaelthasSunstrider.DisableDevastationWhirlwind = 1
+
+#
+# Mount Hyjal
+#
+
+# Damage percentage dealt by Mount Hyjal wave trash against all targets while
+# the raid contains one player. 0.6 means 60% of normal damage.
+# Default: 0.6
+SoloRaids.MountHyjal.Trash.DamagePct = 0.6
+
+# Disable Shadowy Necromancers' Raise Dead spells in solo Mount Hyjal.
+# Default: 1
+SoloRaids.MountHyjal.Trash.DisableRaiseDead = 1
+
+# Disable Fel Stalkers' Mana Burn in solo Mount Hyjal.
+# Default: 1
+SoloRaids.MountHyjal.Trash.DisableManaBurn = 1
+
+# Prevent Gargoyles from participating in waves in solo Mount Hyjal.
+# Gargoyles are immediately removed while still satisfying the wave counter.
+# Default: 1
+SoloRaids.MountHyjal.Trash.PreventGargoyleSpawns = 1
+
+# Mark of Kaz'rogal duration percentage in solo Mount Hyjal.
+# 0.25 means 25% of normal duration.
+# Default: 0.25
+SoloRaids.MountHyjal.Kazrogal.Mark.DurationPct = 0.25
+
+# Kaz'rogal's Cripple debuff duration percentage in solo Mount Hyjal.
+# 0.5 means 50% of normal duration.
+# Default: 0.5
+SoloRaids.MountHyjal.Kazrogal.Cripple.DurationPct = 0.5

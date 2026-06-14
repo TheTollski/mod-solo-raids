@@ -101,3 +101,15 @@ Percentage options use fractional values, so `0.5` means 50%.
 - Master Engineer Telonicus's Remote Toy can be disabled in a solo raid instance.
 - Infinity Blades' Thrash can be disabled in a solo raid instance.
 - Devastation's Whirlwind can be disabled in a solo raid instance.
+
+### Mount Hyjal
+
+#### Wave Trash
+- Damage dealt by wave trash against all targets is configurable in a solo raid instance.
+- Shadowy Necromancers' Raise Dead spells can be disabled in a solo raid instance.
+- Fel Stalkers' Mana Burn can be disabled in a solo raid instance.
+- Gargoyles can be prevented from participating in waves in a solo raid instance.
+
+#### Kaz'rogal
+- Mark of Kaz'rogal's duration percentage is configurable on the solo player.
+- Cripple's debuff duration percentage is configurable on the solo player.

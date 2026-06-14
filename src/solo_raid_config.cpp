@@ -174,4 +174,34 @@ bool DisableKaelthasDevastationWhirlwind()
 {
     return sConfigMgr->GetOption<bool>("SoloRaids.TempestKeep.KaelthasSunstrider.DisableDevastationWhirlwind", true);
 }
+
+float MountHyjalTrashDamagePct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.MountHyjal.Trash.DamagePct", 0.6f), 0.0f, 10.0f);
+}
+
+bool DisableMountHyjalRaiseDead()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.MountHyjal.Trash.DisableRaiseDead", true);
+}
+
+bool DisableMountHyjalManaBurn()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.MountHyjal.Trash.DisableManaBurn", true);
+}
+
+bool PreventMountHyjalGargoyleSpawns()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.MountHyjal.Trash.PreventGargoyleSpawns", true);
+}
+
+float KazrogalMarkDurationPct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.MountHyjal.Kazrogal.Mark.DurationPct", 0.25f), 0.0f, 10.0f);
+}
+
+float KazrogalCrippleDurationPct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.MountHyjal.Kazrogal.Cripple.DurationPct", 0.5f), 0.0f, 10.0f);
+}
 }

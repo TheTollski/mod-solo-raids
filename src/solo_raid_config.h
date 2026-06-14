@@ -45,6 +45,13 @@ uint32 LadyVashjSporebatMinSpawnIntervalMs();
 bool DisableKaelthasRemoteToy();
 bool DisableKaelthasInfinityBladesThrash();
 bool DisableKaelthasDevastationWhirlwind();
+
+float MountHyjalTrashDamagePct();
+bool DisableMountHyjalRaiseDead();
+bool DisableMountHyjalManaBurn();
+bool PreventMountHyjalGargoyleSpawns();
+float KazrogalMarkDurationPct();
+float KazrogalCrippleDurationPct();
 }
 
 #endif
