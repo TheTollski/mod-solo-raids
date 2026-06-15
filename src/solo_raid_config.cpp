@@ -209,4 +209,24 @@ float NajentusTidalShieldDurationPct()
 {
     return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.BlackTemple.Najentus.TidalShield.DurationPct", 0.25f), 0.0f, 10.0f);
 }
+
+uint8 GurtoggAcidicWoundMaxStacks()
+{
+    return ClampConfig(sConfigMgr->GetOption<uint8>("SoloRaids.BlackTemple.GurtoggBloodboil.AcidicWound.MaxStacks", 10), uint8(0), uint8(255));
+}
+
+bool DisableGurtoggBewilderingStrike()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.BlackTemple.GurtoggBloodboil.DisableBewilderingStrike", true);
+}
+
+bool DisableEssenceOfDesireSpiritShock()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.BlackTemple.ReliquaryOfSouls.EssenceOfDesire.DisableSpiritShock", true);
+}
+
+float EssenceOfDesireRuneShieldDurationPct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.BlackTemple.ReliquaryOfSouls.EssenceOfDesire.RuneShield.DurationPct", 0.25f), 0.0f, 10.0f);
+}
 }

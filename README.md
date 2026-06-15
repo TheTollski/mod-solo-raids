@@ -118,3 +118,11 @@ Percentage options use fractional values, so `0.5` means 50%.
 
 #### High Warlord Naj'entus
 - Tidal Shield's duration percentage is configurable in a solo raid instance.
+
+#### Gurtogg Bloodboil
+- Acidic Wound's stack cap is configurable in a solo raid instance.
+- Bewildering Strike can be disabled in a solo raid instance.
+
+#### Reliquary of Souls
+- Essence of Desire's Spirit Shock can be disabled in a solo raid instance.
+- Essence of Desire's Rune Shield duration percentage is configurable in a solo raid instance.

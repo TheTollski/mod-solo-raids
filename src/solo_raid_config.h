@@ -54,6 +54,10 @@ float KazrogalMarkDurationPct();
 float KazrogalCrippleDurationPct();
 
 float NajentusTidalShieldDurationPct();
+uint8 GurtoggAcidicWoundMaxStacks();
+bool DisableGurtoggBewilderingStrike();
+bool DisableEssenceOfDesireSpiritShock();
+float EssenceOfDesireRuneShieldDurationPct();
 }
 
 #endif

@@ -230,3 +230,21 @@ SoloRaids.MountHyjal.Kazrogal.Cripple.DurationPct = 0.5
 # Temple. 0.25 means 25% of normal duration.
 # Default: 0.25
 SoloRaids.BlackTemple.Najentus.TidalShield.DurationPct = 0.25
+
+# Maximum Acidic Wound stacks during Gurtogg Bloodboil in solo Black Temple.
+# Default: 10
+SoloRaids.BlackTemple.GurtoggBloodboil.AcidicWound.MaxStacks = 10
+
+# Disable Bewildering Strike during Gurtogg Bloodboil in solo Black Temple.
+# Default: 1
+SoloRaids.BlackTemple.GurtoggBloodboil.DisableBewilderingStrike = 1
+
+# Disable Essence of Desire's Spirit Shock during Reliquary of Souls in solo
+# Black Temple.
+# Default: 1
+SoloRaids.BlackTemple.ReliquaryOfSouls.EssenceOfDesire.DisableSpiritShock = 1
+
+# Essence of Desire's Rune Shield duration percentage during Reliquary of
+# Souls in solo Black Temple. 0.25 means 25% of normal duration.
+# Default: 0.25
+SoloRaids.BlackTemple.ReliquaryOfSouls.EssenceOfDesire.RuneShield.DurationPct = 0.25
