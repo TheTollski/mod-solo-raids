@@ -269,3 +269,10 @@ SoloRaids.BlackTemple.IllidanStormrage.DisableSummonShadowDemon = 1
 # Disable Sunblade Cabalist's Ignite Mana in solo Sunwell Plateau.
 # Default: 1
 SoloRaids.SunwellPlateau.Trash.DisableSunbladeCabalistIgniteMana = 1
+
+# Complete solo Kalecgos when dragon Kalecgos reaches his banish point. The
+# stock split-realm mechanic resets in solo play because the current victim is
+# excluded from Spectral Blast, and Kalecgos evades when the only player enters
+# the spectral realm.
+# Default: 1
+SoloRaids.SunwellPlateau.Kalecgos.CompleteOnBanish = 1

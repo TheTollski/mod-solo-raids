@@ -180,6 +180,11 @@ bool DisableSunbladeCabalistIgniteMana()
     return sConfigMgr->GetOption<bool>("SoloRaids.SunwellPlateau.Trash.DisableSunbladeCabalistIgniteMana", true);
 }
 
+bool CompleteKalecgosSoloOnBanish()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.SunwellPlateau.Kalecgos.CompleteOnBanish", true);
+}
+
 float MountHyjalTrashDamagePct()
 {
     return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.MountHyjal.Trash.DamagePct", 0.6f), 0.0f, 10.0f);

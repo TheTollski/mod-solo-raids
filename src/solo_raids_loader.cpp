@@ -7,6 +7,7 @@ void AddGurtoggBloodboilSoloRaidScripts();
 void AddHighKingMaulgarSoloRaidScripts();
 void AddHighWarlordNajentusSoloRaidScripts();
 void AddIllidanStormrageSoloRaidScripts();
+void AddKalecgosSoloRaidScripts();
 void AddKelThuzadSoloRaidScripts();
 void AddKaelthasSunstriderSoloRaidScripts();
 void AddKazrogalSoloRaidScripts();
@@ -36,6 +37,7 @@ void Addmod_solo_raidsScripts()
     AddHighKingMaulgarSoloRaidScripts();
     AddHighWarlordNajentusSoloRaidScripts();
     AddIllidanStormrageSoloRaidScripts();
+    AddKalecgosSoloRaidScripts();
     AddKelThuzadSoloRaidScripts();
     AddKaelthasSunstriderSoloRaidScripts();
     AddKazrogalSoloRaidScripts();

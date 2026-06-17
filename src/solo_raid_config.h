@@ -46,6 +46,7 @@ bool DisableKaelthasRemoteToy();
 bool DisableKaelthasInfinityBladesThrash();
 bool DisableKaelthasDevastationWhirlwind();
 bool DisableSunbladeCabalistIgniteMana();
+bool CompleteKalecgosSoloOnBanish();
 
 float MountHyjalTrashDamagePct();
 bool DisableMountHyjalRaiseDead();
