@@ -175,6 +175,11 @@ bool DisableKaelthasDevastationWhirlwind()
     return sConfigMgr->GetOption<bool>("SoloRaids.TempestKeep.KaelthasSunstrider.DisableDevastationWhirlwind", true);
 }
 
+bool DisableSunbladeCabalistIgniteMana()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.SunwellPlateau.Trash.DisableSunbladeCabalistIgniteMana", true);
+}
+
 float MountHyjalTrashDamagePct()
 {
     return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.MountHyjal.Trash.DamagePct", 0.6f), 0.0f, 10.0f);
@@ -228,5 +233,20 @@ bool DisableEssenceOfDesireSpiritShock()
 float EssenceOfDesireRuneShieldDurationPct()
 {
     return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.BlackTemple.ReliquaryOfSouls.EssenceOfDesire.RuneShield.DurationPct", 0.25f), 0.0f, 10.0f);
+}
+
+float FlameOfAzzinothDamagePct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.BlackTemple.IllidanStormrage.FlameOfAzzinoth.DamagePct", 0.75f), 0.0f, 10.0f);
+}
+
+uint8 IllidanAuraOfDreadMaxStacks()
+{
+    return ClampConfig(sConfigMgr->GetOption<uint8>("SoloRaids.BlackTemple.IllidanStormrage.AuraOfDread.MaxStacks", 3), uint8(0), uint8(255));
+}
+
+bool DisableIllidanSummonShadowDemon()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.BlackTemple.IllidanStormrage.DisableSummonShadowDemon", true);
 }
 }

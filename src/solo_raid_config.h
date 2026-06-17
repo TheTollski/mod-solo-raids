@@ -45,6 +45,7 @@ uint32 LadyVashjSporebatMinSpawnIntervalMs();
 bool DisableKaelthasRemoteToy();
 bool DisableKaelthasInfinityBladesThrash();
 bool DisableKaelthasDevastationWhirlwind();
+bool DisableSunbladeCabalistIgniteMana();
 
 float MountHyjalTrashDamagePct();
 bool DisableMountHyjalRaiseDead();
@@ -58,6 +59,9 @@ uint8 GurtoggAcidicWoundMaxStacks();
 bool DisableGurtoggBewilderingStrike();
 bool DisableEssenceOfDesireSpiritShock();
 float EssenceOfDesireRuneShieldDurationPct();
+float FlameOfAzzinothDamagePct();
+uint8 IllidanAuraOfDreadMaxStacks();
+bool DisableIllidanSummonShadowDemon();
 }
 
 #endif

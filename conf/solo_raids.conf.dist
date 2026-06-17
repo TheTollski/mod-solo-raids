@@ -248,3 +248,24 @@ SoloRaids.BlackTemple.ReliquaryOfSouls.EssenceOfDesire.DisableSpiritShock = 1
 # Souls in solo Black Temple. 0.25 means 25% of normal duration.
 # Default: 0.25
 SoloRaids.BlackTemple.ReliquaryOfSouls.EssenceOfDesire.RuneShield.DurationPct = 0.25
+
+# Flame of Azzinoth damage output percentage during Illidan Stormrage in solo
+# Black Temple. 0.75 means 75% of normal damage.
+# Default: 0.75
+SoloRaids.BlackTemple.IllidanStormrage.FlameOfAzzinoth.DamagePct = 0.75
+
+# Maximum Aura of Dread stacks during Illidan Stormrage in solo Black Temple.
+# Default: 3
+SoloRaids.BlackTemple.IllidanStormrage.AuraOfDread.MaxStacks = 3
+
+# Disable Summon Shadow Demon during Illidan Stormrage in solo Black Temple.
+# Default: 1
+SoloRaids.BlackTemple.IllidanStormrage.DisableSummonShadowDemon = 1
+
+#
+# Sunwell Plateau
+#
+
+# Disable Sunblade Cabalist's Ignite Mana in solo Sunwell Plateau.
+# Default: 1
+SoloRaids.SunwellPlateau.Trash.DisableSunbladeCabalistIgniteMana = 1
