@@ -276,3 +276,17 @@ SoloRaids.SunwellPlateau.Trash.DisableSunbladeCabalistIgniteMana = 1
 # the spectral realm.
 # Default: 1
 SoloRaids.SunwellPlateau.Kalecgos.CompleteOnBanish = 1
+
+# Maximum Meteor Slash stacks during Brutallus in solo Sunwell Plateau.
+# Default: 1
+SoloRaids.SunwellPlateau.Brutallus.MeteorSlash.MaxStacks = 1
+
+# Brutallus melee damage percentage in solo Sunwell Plateau. 0.6 means 60% of
+# normal melee damage.
+# Default: 0.6
+SoloRaids.SunwellPlateau.Brutallus.MeleeDamagePct = 0.6
+
+# Brutallus max health percentage after other scaling such as AutoBalance in
+# solo Sunwell Plateau. 0.75 means 75% of the already-scaled max health.
+# Default: 0.75
+SoloRaids.SunwellPlateau.Brutallus.MaxHealthPct = 0.75

@@ -1,4 +1,5 @@
 void AddAeonusSoloRaidScripts();
+void AddBrutallusSoloRaidScripts();
 void AddChromaggusSoloRaidScripts();
 void AddEbonrocSoloRaidScripts();
 void AddFathomLordKarathressSoloRaidScripts();
@@ -29,6 +30,7 @@ void AddVaelastraszTheCorruptSoloRaidScripts();
 void Addmod_solo_raidsScripts()
 {
     AddAeonusSoloRaidScripts();
+    AddBrutallusSoloRaidScripts();
     AddChromaggusSoloRaidScripts();
     AddEbonrocSoloRaidScripts();
     AddFathomLordKarathressSoloRaidScripts();

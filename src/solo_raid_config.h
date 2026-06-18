@@ -47,6 +47,9 @@ bool DisableKaelthasInfinityBladesThrash();
 bool DisableKaelthasDevastationWhirlwind();
 bool DisableSunbladeCabalistIgniteMana();
 bool CompleteKalecgosSoloOnBanish();
+uint8 BrutallusMeteorSlashMaxStacks();
+float BrutallusMeleeDamagePct();
+float BrutallusMaxHealthPct();
 
 float MountHyjalTrashDamagePct();
 bool DisableMountHyjalRaiseDead();

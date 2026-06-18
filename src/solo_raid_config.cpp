@@ -185,6 +185,21 @@ bool CompleteKalecgosSoloOnBanish()
     return sConfigMgr->GetOption<bool>("SoloRaids.SunwellPlateau.Kalecgos.CompleteOnBanish", true);
 }
 
+uint8 BrutallusMeteorSlashMaxStacks()
+{
+    return ClampConfig(sConfigMgr->GetOption<uint8>("SoloRaids.SunwellPlateau.Brutallus.MeteorSlash.MaxStacks", 1), uint8(0), uint8(255));
+}
+
+float BrutallusMeleeDamagePct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.SunwellPlateau.Brutallus.MeleeDamagePct", 0.8f), 0.0f, 10.0f);
+}
+
+float BrutallusMaxHealthPct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.SunwellPlateau.Brutallus.MaxHealthPct", 0.75f), 0.01f, 10.0f);
+}
+
 float MountHyjalTrashDamagePct()
 {
     return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.MountHyjal.Trash.DamagePct", 0.6f), 0.0f, 10.0f);
