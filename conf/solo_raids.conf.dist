@@ -281,12 +281,26 @@ SoloRaids.SunwellPlateau.Kalecgos.CompleteOnBanish = 1
 # Default: 1
 SoloRaids.SunwellPlateau.Brutallus.MeteorSlash.MaxStacks = 1
 
+# Brutallus max health percentage after other scaling such as AutoBalance in
+# solo Sunwell Plateau. 0.75 means 75% of the already-scaled max health.
+# Default: 0.75
+SoloRaids.SunwellPlateau.Brutallus.MaxHealthPct = 0.75
+
 # Brutallus melee damage percentage in solo Sunwell Plateau. 0.6 means 60% of
 # normal melee damage.
 # Default: 0.6
 SoloRaids.SunwellPlateau.Brutallus.MeleeDamagePct = 0.6
 
-# Brutallus max health percentage after other scaling such as AutoBalance in
-# solo Sunwell Plateau. 0.75 means 75% of the already-scaled max health.
-# Default: 0.75
-SoloRaids.SunwellPlateau.Brutallus.MaxHealthPct = 0.75
+# Shadowsword Berserker and Shadowsword Fury Mage max health percentage after
+# other scaling such as AutoBalance during solo M'uru. 0.3 means 30%.
+# Default: 0.3
+SoloRaids.SunwellPlateau.Muru.ShadowswordAdds.MaxHealthPct = 0.3
+
+# Shadowsword Berserker and Shadowsword Fury Mage damage output percentage
+# during solo M'uru. 0.3 means 30% of normal damage.
+# Default: 0.3
+SoloRaids.SunwellPlateau.Muru.ShadowswordAdds.DamagePct = 0.3
+
+# Prevent Dark Fiends from spawning during solo M'uru and Entropius.
+# Default: 1
+SoloRaids.SunwellPlateau.Muru.PreventDarkFiendSpawns = 1

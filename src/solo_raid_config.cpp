@@ -200,6 +200,21 @@ float BrutallusMaxHealthPct()
     return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.SunwellPlateau.Brutallus.MaxHealthPct", 0.75f), 0.01f, 10.0f);
 }
 
+float MuruShadowswordAddsMaxHealthPct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.SunwellPlateau.Muru.ShadowswordAdds.MaxHealthPct", 0.5f), 0.01f, 10.0f);
+}
+
+float MuruShadowswordAddsDamagePct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.SunwellPlateau.Muru.ShadowswordAdds.DamagePct", 0.5f), 0.0f, 10.0f);
+}
+
+bool PreventMuruDarkFiendSpawns()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.SunwellPlateau.Muru.PreventDarkFiendSpawns", true);
+}
+
 float MountHyjalTrashDamagePct()
 {
     return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.MountHyjal.Trash.DamagePct", 0.6f), 0.0f, 10.0f);

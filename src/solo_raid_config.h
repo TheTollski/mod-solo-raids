@@ -50,6 +50,9 @@ bool CompleteKalecgosSoloOnBanish();
 uint8 BrutallusMeteorSlashMaxStacks();
 float BrutallusMeleeDamagePct();
 float BrutallusMaxHealthPct();
+float MuruShadowswordAddsMaxHealthPct();
+float MuruShadowswordAddsDamagePct();
+bool PreventMuruDarkFiendSpawns();
 
 float MountHyjalTrashDamagePct();
 bool DisableMountHyjalRaiseDead();

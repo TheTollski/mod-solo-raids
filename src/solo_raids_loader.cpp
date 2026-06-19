@@ -16,6 +16,7 @@ void AddLadyVashjSoloRaidScripts();
 void AddMagtheridonSoloRaidScripts();
 void AddMorogrimTidewalkerSoloRaidScripts();
 void AddMountHyjalTrashSoloRaidScripts();
+void AddMuruSoloRaidScripts();
 void AddNetherspiteSoloRaidScripts();
 void AddPatchwerkSoloRaidScripts();
 void AddRazorgoreTheUntamedSoloRaidScripts();
@@ -47,6 +48,7 @@ void Addmod_solo_raidsScripts()
     AddMagtheridonSoloRaidScripts();
     AddMorogrimTidewalkerSoloRaidScripts();
     AddMountHyjalTrashSoloRaidScripts();
+    AddMuruSoloRaidScripts();
     AddNetherspiteSoloRaidScripts();
     AddPatchwerkSoloRaidScripts();
     AddRazorgoreTheUntamedSoloRaidScripts();
