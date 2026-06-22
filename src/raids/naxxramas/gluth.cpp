@@ -98,7 +98,17 @@ public:
 class GluthSoloRaidUnitScript : public UnitScript
 {
 public:
-    GluthSoloRaidUnitScript() : UnitScript("GluthSoloRaidUnitScript", true, { UNITHOOK_ON_AURA_APPLY, UNITHOOK_ON_UNIT_DEATH, UNITHOOK_ON_UNIT_UPDATE }) { }
+    GluthSoloRaidUnitScript() : UnitScript("GluthSoloRaidUnitScript", true, { UNITHOOK_ON_DAMAGE, UNITHOOK_ON_AURA_APPLY, UNITHOOK_ON_UNIT_UPDATE }) { }
+
+    void OnDamage(Unit* attacker, Unit* victim, uint32& damage) override
+    {
+        if (!SoloRaids::Config::DisableGluthZombieHealing() || !IsGluth(attacker) || !IsZombieChow(victim) ||
+            damage < victim->GetHealth() || !SoloRaids::IsSoloMap(attacker->GetMap(), SOLO_RAIDS_MAP_NAXXRAMAS))
+            return;
+
+        // Gluth heals directly from KilledUnit, so remember his health before the lethal hit.
+        gluthHealthBeforeZombieHeal.try_emplace(attacker->GetGUID(), attacker->GetHealth());
+    }
 
     void OnAuraApply(Unit* unit, Aura* aura) override
     {
@@ -122,14 +132,6 @@ public:
             aura->SetMaxDuration(duration);
             aura->SetDuration(duration);
         }
-    }
-
-    void OnUnitDeath(Unit* unit, Unit* killer) override
-    {
-        if (!SoloRaids::Config::DisableGluthZombieHealing() || !IsZombieChow(unit) || !IsGluth(killer) || !SoloRaids::IsSoloMap(killer->GetMap(), SOLO_RAIDS_MAP_NAXXRAMAS))
-            return;
-
-        gluthHealthBeforeZombieHeal[killer->GetGUID()] = killer->GetHealth();
     }
 
     void OnUnitUpdate(Unit* unit, uint32 /*diff*/) override
