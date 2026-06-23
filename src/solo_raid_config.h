@@ -22,6 +22,7 @@ bool DisableGluthZombieHealing();
 uint8 GluthMortalWoundMaxStacks();
 float GluthEnrageDurationPct();
 bool DisableThaddiusStaticFieldManaDrain();
+bool DisableThaddiusTeslaShock();
 bool DisableRazuviousManaBurn();
 float RazuviousUnbalancingStrikeDamagePct();
 uint32 KelThuzadGuardianOfIcecrownMaxActive();

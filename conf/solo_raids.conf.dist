@@ -81,6 +81,10 @@ SoloRaids.Naxxramas.Gluth.Enrage.DurationPct = 0.5
 # Default: 1
 SoloRaids.Naxxramas.Thaddius.DisableStaticFieldManaDrain = 1
 
+# Disable the Tesla coils' Tesla Shock during the first phase of Thaddius in solo Naxxramas.
+# Default: 1
+SoloRaids.Naxxramas.Thaddius.DisableTeslaShock = 1
+
 # Disable Instructor Razuvious's Mana Burn in solo Naxxramas.
 # Default: 1
 SoloRaids.Naxxramas.Razuvious.DisableManaBurn = 1

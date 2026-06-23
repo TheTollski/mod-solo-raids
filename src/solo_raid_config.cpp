@@ -80,6 +80,11 @@ bool DisableThaddiusStaticFieldManaDrain()
     return sConfigMgr->GetOption<bool>("SoloRaids.Naxxramas.Thaddius.DisableStaticFieldManaDrain", true);
 }
 
+bool DisableThaddiusTeslaShock()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.Naxxramas.Thaddius.DisableTeslaShock", true);
+}
+
 bool DisableRazuviousManaBurn()
 {
     return sConfigMgr->GetOption<bool>("SoloRaids.Naxxramas.Razuvious.DisableManaBurn", true);

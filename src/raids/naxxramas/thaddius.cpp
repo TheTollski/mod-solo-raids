@@ -5,18 +5,21 @@
 #include "ObjectGuid.h"
 #include "Player.h"
 #include "ScriptMgr.h"
+#include "Spell.h"
 #include "SpellInfo.h"
 #include "Unit.h"
 #include "UnitScript.h"
 
 #include <algorithm>
 #include <set>
+#include <string>
 
 namespace
 {
 constexpr uint32 NPC_FEUGEN = 15930;
 constexpr uint32 NPC_FEUGEN_40 = 351002;
 constexpr uint32 SPELL_STATIC_FIELD = 28135;
+constexpr uint32 SPELL_TESLA_SHOCK = 28099;
 constexpr uint32 SOLO_RAIDS_MAP_NAXXRAMAS = 533;
 
 std::set<uint32> thaddiusSoloAnnouncementMaps;
@@ -43,10 +46,18 @@ void AnnounceThaddiusSoloTweaks(Creature* feugen)
     if (thaddiusSoloAnnouncementMaps.count(instanceId) != 0)
         return;
 
-    if (!SoloRaids::Config::DisableThaddiusStaticFieldManaDrain())
+    bool const disableStaticFieldManaDrain = SoloRaids::Config::DisableThaddiusStaticFieldManaDrain();
+    bool const disableTeslaShock = SoloRaids::Config::DisableThaddiusTeslaShock();
+    if (!disableStaticFieldManaDrain && !disableTeslaShock)
         return;
 
-    player->SendSystemMessage("mod-solo-raids active: Naxxramas solo tweaks enabled for Thaddius. Feugen's Static Field mana drain disabled.");
+    std::string message = "mod-solo-raids active: Naxxramas solo tweaks enabled for Thaddius.";
+    if (disableStaticFieldManaDrain)
+        message += " Feugen's Static Field mana drain disabled.";
+    if (disableTeslaShock)
+        message += " Tesla Shock disabled during phase one.";
+
+    player->SendSystemMessage(message.c_str());
     thaddiusSoloAnnouncementMaps.insert(instanceId);
 }
 }
@@ -74,6 +85,22 @@ public:
     }
 };
 
+class ThaddiusSoloRaidSpellScript : public AllSpellScript
+{
+public:
+    ThaddiusSoloRaidSpellScript() : AllSpellScript("ThaddiusSoloRaidSpellScript", { ALLSPELLHOOK_CAN_PREPARE }) { }
+
+    bool CanPrepare(Spell* spell, SpellCastTargets const* /*targets*/, AuraEffect const* /*triggeredByAura*/) override
+    {
+        if (!spell || spell->GetSpellInfo()->Id != SPELL_TESLA_SHOCK ||
+            !SoloRaids::Config::DisableThaddiusTeslaShock())
+            return true;
+
+        Unit* caster = spell->GetCaster();
+        return !caster || !SoloRaids::IsSoloMap(caster->GetMap(), SOLO_RAIDS_MAP_NAXXRAMAS);
+    }
+};
+
 class ThaddiusSoloRaidUnitScript : public UnitScript
 {
 public:
@@ -96,5 +123,6 @@ public:
 void AddThaddiusSoloRaidScripts()
 {
     new ThaddiusSoloRaidCreatureScript();
+    new ThaddiusSoloRaidSpellScript();
     new ThaddiusSoloRaidUnitScript();
 }
