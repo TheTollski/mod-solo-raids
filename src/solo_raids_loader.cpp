@@ -2,6 +2,7 @@ void AddAeonusSoloRaidScripts();
 void AddBrutallusSoloRaidScripts();
 void AddChromaggusSoloRaidScripts();
 void AddEbonrocSoloRaidScripts();
+void AddFaerlinaSoloRaidScripts();
 void AddFathomLordKarathressSoloRaidScripts();
 void AddGluthSoloRaidScripts();
 void AddGurtoggBloodboilSoloRaidScripts();
@@ -34,6 +35,7 @@ void Addmod_solo_raidsScripts()
     AddBrutallusSoloRaidScripts();
     AddChromaggusSoloRaidScripts();
     AddEbonrocSoloRaidScripts();
+    AddFaerlinaSoloRaidScripts();
     AddFathomLordKarathressSoloRaidScripts();
     AddGluthSoloRaidScripts();
     AddGurtoggBloodboilSoloRaidScripts();

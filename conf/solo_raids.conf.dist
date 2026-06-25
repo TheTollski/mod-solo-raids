@@ -64,6 +64,10 @@ SoloRaids.TempleOfAhnQiraj.TwinEmperors.DisableHealBrother = 1
 # Default: 0.5
 SoloRaids.Naxxramas.Patchwerk.HatefulStrike.DamagePct = 0.5
 
+# Make Naxx25 and Naxx40 Worshippers cast Widow's Embrace on Grand Widow Faerlina when they die in solo Naxxramas.
+# Default: 1
+SoloRaids.Naxxramas.Faerlina.WorshippersCastWidowsEmbraceOnDeath = 1
+
 # Disable Gluth's zombie healing in solo Naxxramas.
 # Default: 1
 SoloRaids.Naxxramas.Gluth.DisableZombieHealing = 1
@@ -84,6 +88,11 @@ SoloRaids.Naxxramas.Thaddius.DisableStaticFieldManaDrain = 1
 # Disable the Tesla coils' Tesla Shock during the first phase of Thaddius in solo Naxxramas.
 # Default: 1
 SoloRaids.Naxxramas.Thaddius.DisableTeslaShock = 1
+
+# Thaddius max health percentage in solo Naxxramas, applied after other scaling.
+# 0.6 means 60% of scaled max health.
+# Default: 0.6
+SoloRaids.Naxxramas.Thaddius.MaxHealthPct = 0.6
 
 # Disable Instructor Razuvious's Mana Burn in solo Naxxramas.
 # Default: 1

@@ -17,6 +17,7 @@ namespace
 constexpr uint32 NPC_PATCHWERK = 16028;
 constexpr uint32 NPC_PATCHWERK_40 = 351028;
 constexpr uint32 SPELL_HATEFUL_STRIKE = 41926;
+constexpr uint32 SPELL_HATEFUL_STRIKE_25 = 59192;
 constexpr uint32 SOLO_RAIDS_MAP_NAXXRAMAS = 533;
 
 std::set<uint32> patchwerkSoloAnnouncementMaps;
@@ -28,6 +29,11 @@ bool IsPatchwerk(Unit const* unit)
 
     uint32 const entry = unit->GetEntry();
     return entry == NPC_PATCHWERK || entry == NPC_PATCHWERK_40;
+}
+
+bool IsHatefulStrike(uint32 spellId)
+{
+    return spellId == SPELL_HATEFUL_STRIKE || spellId == SPELL_HATEFUL_STRIKE_25;
 }
 
 void AnnouncePatchwerkSoloTweaks(Creature* patchwerk)
@@ -83,7 +89,7 @@ public:
 
     void ModifySpellDamageTaken(Unit* target, Unit* source, int32& amount, SpellInfo const* spellInfo) override
     {
-        if (!target || !source || !spellInfo || spellInfo->Id != SPELL_HATEFUL_STRIKE || !IsPatchwerk(source) || !SoloRaids::IsSoloPlayer(target, SOLO_RAIDS_MAP_NAXXRAMAS))
+        if (!target || !source || !spellInfo || !IsHatefulStrike(spellInfo->Id) || !IsPatchwerk(source) || !SoloRaids::IsSoloPlayer(target, SOLO_RAIDS_MAP_NAXXRAMAS))
             return;
 
         amount = int32(float(amount) * SoloRaids::Config::PatchwerkHatefulStrikeDamagePct());

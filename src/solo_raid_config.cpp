@@ -60,6 +60,11 @@ float PatchwerkHatefulStrikeDamagePct()
     return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.Naxxramas.Patchwerk.HatefulStrike.DamagePct", 0.5f), 0.0f, 10.0f);
 }
 
+bool FaerlinaWorshippersCastWidowsEmbraceOnDeath()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.Naxxramas.Faerlina.WorshippersCastWidowsEmbraceOnDeath", true);
+}
+
 bool DisableGluthZombieHealing()
 {
     return sConfigMgr->GetOption<bool>("SoloRaids.Naxxramas.Gluth.DisableZombieHealing", true);
@@ -83,6 +88,11 @@ bool DisableThaddiusStaticFieldManaDrain()
 bool DisableThaddiusTeslaShock()
 {
     return sConfigMgr->GetOption<bool>("SoloRaids.Naxxramas.Thaddius.DisableTeslaShock", true);
+}
+
+float ThaddiusMaxHealthPct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.Naxxramas.Thaddius.MaxHealthPct", 0.6f), 0.0f, 10.0f);
 }
 
 bool DisableRazuviousManaBurn()

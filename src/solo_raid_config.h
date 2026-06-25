@@ -18,11 +18,13 @@ bool DisableChromaggusTimeLapse();
 bool DisableTwinEmperorsHealBrother();
 
 float PatchwerkHatefulStrikeDamagePct();
+bool FaerlinaWorshippersCastWidowsEmbraceOnDeath();
 bool DisableGluthZombieHealing();
 uint8 GluthMortalWoundMaxStacks();
 float GluthEnrageDurationPct();
 bool DisableThaddiusStaticFieldManaDrain();
 bool DisableThaddiusTeslaShock();
+float ThaddiusMaxHealthPct();
 bool DisableRazuviousManaBurn();
 float RazuviousUnbalancingStrikeDamagePct();
 uint32 KelThuzadGuardianOfIcecrownMaxActive();
