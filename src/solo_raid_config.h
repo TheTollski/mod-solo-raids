@@ -29,6 +29,8 @@ bool DisableRazuviousManaBurn();
 float RazuviousUnbalancingStrikeDamagePct();
 uint32 KelThuzadGuardianOfIcecrownMaxActive();
 
+uint8 RazorscaleFuseArmorMaxStacks();
+
 bool DisableNetherspitePortalBuffs();
 bool MagtheridonOneCubeBanish();
 bool DisableMagtheridonBurningAbyssal();
@@ -72,6 +74,8 @@ float EssenceOfDesireRuneShieldDurationPct();
 float FlameOfAzzinothDamagePct();
 uint8 IllidanAuraOfDreadMaxStacks();
 bool DisableIllidanSummonShadowDemon();
+
+float MalygosVortexDamagePct();
 }
 
 #endif

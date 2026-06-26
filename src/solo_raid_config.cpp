@@ -110,6 +110,11 @@ uint32 KelThuzadGuardianOfIcecrownMaxActive()
     return ClampConfig(sConfigMgr->GetOption<uint32>("SoloRaids.Naxxramas.KelThuzad.GuardianOfIcecrown.MaxActive", 2), uint32(0), uint32(100));
 }
 
+uint8 RazorscaleFuseArmorMaxStacks()
+{
+    return ClampConfig(sConfigMgr->GetOption<uint8>("SoloRaids.Ulduar.Razorscale.FuseArmor.MaxStacks", 3), uint8(0), uint8(255));
+}
+
 bool DisableNetherspitePortalBuffs()
 {
     return sConfigMgr->GetOption<bool>("SoloRaids.Karazhan.Netherspite.DisablePortalBuffs", true);
@@ -298,5 +303,10 @@ uint8 IllidanAuraOfDreadMaxStacks()
 bool DisableIllidanSummonShadowDemon()
 {
     return sConfigMgr->GetOption<bool>("SoloRaids.BlackTemple.IllidanStormrage.DisableSummonShadowDemon", true);
+}
+
+float MalygosVortexDamagePct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.EyeOfEternity.Malygos.Vortex.DamagePct", 0.5f), 0.0f, 10.0f);
 }
 }

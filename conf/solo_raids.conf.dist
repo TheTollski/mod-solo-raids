@@ -317,3 +317,21 @@ SoloRaids.SunwellPlateau.Muru.ShadowswordAdds.DamagePct = 0.3
 # Prevent Dark Fiends from spawning during solo M'uru and Entropius.
 # Default: 1
 SoloRaids.SunwellPlateau.Muru.PreventDarkFiendSpawns = 1
+
+
+#
+# Eye of Eternity
+#
+
+# Malygos Vortex damage percentage against the solo player.
+# 0.5 means 50% of normal damage.
+# Default: 0.5
+SoloRaids.EyeOfEternity.Malygos.Vortex.DamagePct = 0.5
+
+#
+# Ulduar
+#
+
+# Maximum Fuse Armor stacks on the solo player during Razorscale in solo Ulduar.
+# Default: 3
+SoloRaids.Ulduar.Razorscale.FuseArmor.MaxStacks = 3
