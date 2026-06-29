@@ -80,6 +80,8 @@ float XT002ScrapbotHealingPct();
 float AssemblyOfIronShieldOfRunesDurationPct();
 bool DisableKologarnStoneGrip();
 float AuriayaAddMaxHealthPct();
+float HodirMaxHealthPct();
+float HodirFlashFreezeMaxHealthPct();
 }
 
 #endif

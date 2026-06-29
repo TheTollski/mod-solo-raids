@@ -329,4 +329,14 @@ float AuriayaAddMaxHealthPct()
 {
     return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.Ulduar.Auriaya.Adds.MaxHealthPct", 0.5f), 0.01f, 10.0f);
 }
+
+float HodirMaxHealthPct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.Ulduar.Hodir.MaxHealthPct", 0.7f), 0.01f, 10.0f);
+}
+
+float HodirFlashFreezeMaxHealthPct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.Ulduar.Hodir.FlashFreeze.MaxHealthPct", 0.5f), 0.01f, 10.0f);
+}
 }

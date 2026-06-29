@@ -355,3 +355,13 @@ SoloRaids.Ulduar.Kologarn.DisableStoneGrip = 1
 # during Auriaya in solo Ulduar. 0.5 means 50%.
 # Default: 0.5
 SoloRaids.Ulduar.Auriaya.Adds.MaxHealthPct = 0.5
+
+# Hodir max health percentage after other scaling in solo Ulduar.
+# 0.8 means 80%.
+# Default: 0.8
+SoloRaids.Ulduar.Hodir.MaxHealthPct = 0.8
+
+# Flash Freeze max health percentage after other scaling during Hodir in solo
+# Ulduar. 0.5 means 50%.
+# Default: 0.5
+SoloRaids.Ulduar.Hodir.FlashFreeze.MaxHealthPct = 0.5
