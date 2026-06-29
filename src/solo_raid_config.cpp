@@ -120,6 +120,11 @@ float XT002ScrapbotHealingPct()
     return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.Ulduar.XT002.ScrapbotHealingPct", 0.5f), 0.0f, 10.0f);
 }
 
+float AssemblyOfIronShieldOfRunesDurationPct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.Ulduar.AssemblyOfIron.ShieldOfRunes.DurationPct", 0.2f), 0.0f, 10.0f);
+}
+
 bool DisableNetherspitePortalBuffs()
 {
     return sConfigMgr->GetOption<bool>("SoloRaids.Karazhan.Netherspite.DisablePortalBuffs", true);

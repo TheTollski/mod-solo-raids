@@ -31,6 +31,7 @@ uint32 KelThuzadGuardianOfIcecrownMaxActive();
 
 uint8 RazorscaleFuseArmorMaxStacks();
 float XT002ScrapbotHealingPct();
+float AssemblyOfIronShieldOfRunesDurationPct();
 
 bool DisableNetherspitePortalBuffs();
 bool MagtheridonOneCubeBanish();

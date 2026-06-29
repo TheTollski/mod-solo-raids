@@ -340,3 +340,9 @@ SoloRaids.Ulduar.Razorscale.FuseArmor.MaxStacks = 3
 # 0.5 means Scrapbots heal XT-002 for 50% of their normal amount.
 # Default: 0.5
 SoloRaids.Ulduar.XT002.ScrapbotHealingPct = 0.5
+
+# Assembly of Iron Shield of Runes duration percentage in solo Ulduar.
+# Applies to both the absorb shield and the damage increase.
+# 0.2 means 20% of normal duration.
+# Default: 0.2
+SoloRaids.Ulduar.AssemblyOfIron.ShieldOfRunes.DurationPct = 0.2

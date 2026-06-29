@@ -1,4 +1,5 @@
 void AddAeonusSoloRaidScripts();
+void AddAssemblyOfIronSoloRaidScripts();
 void AddBrutallusSoloRaidScripts();
 void AddChromaggusSoloRaidScripts();
 void AddEbonrocSoloRaidScripts();
@@ -35,6 +36,7 @@ void AddXT002SoloRaidScripts();
 void Addmod_solo_raidsScripts()
 {
     AddAeonusSoloRaidScripts();
+    AddAssemblyOfIronSoloRaidScripts();
     AddBrutallusSoloRaidScripts();
     AddChromaggusSoloRaidScripts();
     AddEbonrocSoloRaidScripts();
