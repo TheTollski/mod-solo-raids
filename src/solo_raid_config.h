@@ -29,10 +29,6 @@ bool DisableRazuviousManaBurn();
 float RazuviousUnbalancingStrikeDamagePct();
 uint32 KelThuzadGuardianOfIcecrownMaxActive();
 
-uint8 RazorscaleFuseArmorMaxStacks();
-float XT002ScrapbotHealingPct();
-float AssemblyOfIronShieldOfRunesDurationPct();
-
 bool DisableNetherspitePortalBuffs();
 bool MagtheridonOneCubeBanish();
 bool DisableMagtheridonBurningAbyssal();
@@ -78,6 +74,12 @@ uint8 IllidanAuraOfDreadMaxStacks();
 bool DisableIllidanSummonShadowDemon();
 
 float MalygosVortexDamagePct();
+
+uint8 RazorscaleFuseArmorMaxStacks();
+float XT002ScrapbotHealingPct();
+float AssemblyOfIronShieldOfRunesDurationPct();
+bool DisableKologarnStoneGrip();
+float AuriayaAddMaxHealthPct();
 }
 
 #endif

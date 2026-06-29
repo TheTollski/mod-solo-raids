@@ -346,3 +346,12 @@ SoloRaids.Ulduar.XT002.ScrapbotHealingPct = 0.5
 # 0.2 means 20% of normal duration.
 # Default: 0.2
 SoloRaids.Ulduar.AssemblyOfIron.ShieldOfRunes.DurationPct = 0.2
+
+# Disable Kologarn's Stone Grip in solo Ulduar.
+# Default: 1
+SoloRaids.Ulduar.Kologarn.DisableStoneGrip = 1
+
+# Sanctum Sentry and Feral Defender max health percentage after other scaling
+# during Auriaya in solo Ulduar. 0.5 means 50%.
+# Default: 0.5
+SoloRaids.Ulduar.Auriaya.Adds.MaxHealthPct = 0.5

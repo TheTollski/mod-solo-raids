@@ -1,5 +1,6 @@
 void AddAeonusSoloRaidScripts();
 void AddAssemblyOfIronSoloRaidScripts();
+void AddAuriayaSoloRaidScripts();
 void AddBrutallusSoloRaidScripts();
 void AddChromaggusSoloRaidScripts();
 void AddEbonrocSoloRaidScripts();
@@ -14,6 +15,7 @@ void AddKalecgosSoloRaidScripts();
 void AddKelThuzadSoloRaidScripts();
 void AddKaelthasSunstriderSoloRaidScripts();
 void AddKazrogalSoloRaidScripts();
+void AddKologarnSoloRaidScripts();
 void AddLadyVashjSoloRaidScripts();
 void AddMalygosSoloRaidScripts();
 void AddMagtheridonSoloRaidScripts();
@@ -37,6 +39,7 @@ void Addmod_solo_raidsScripts()
 {
     AddAeonusSoloRaidScripts();
     AddAssemblyOfIronSoloRaidScripts();
+    AddAuriayaSoloRaidScripts();
     AddBrutallusSoloRaidScripts();
     AddChromaggusSoloRaidScripts();
     AddEbonrocSoloRaidScripts();
@@ -51,6 +54,7 @@ void Addmod_solo_raidsScripts()
     AddKelThuzadSoloRaidScripts();
     AddKaelthasSunstriderSoloRaidScripts();
     AddKazrogalSoloRaidScripts();
+    AddKologarnSoloRaidScripts();
     AddLadyVashjSoloRaidScripts();
     AddMalygosSoloRaidScripts();
     AddMagtheridonSoloRaidScripts();
