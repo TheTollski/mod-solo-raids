@@ -30,6 +30,7 @@ float RazuviousUnbalancingStrikeDamagePct();
 uint32 KelThuzadGuardianOfIcecrownMaxActive();
 
 uint8 RazorscaleFuseArmorMaxStacks();
+float XT002ScrapbotHealingPct();
 
 bool DisableNetherspitePortalBuffs();
 bool MagtheridonOneCubeBanish();

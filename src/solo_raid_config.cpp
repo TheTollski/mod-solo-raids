@@ -115,6 +115,11 @@ uint8 RazorscaleFuseArmorMaxStacks()
     return ClampConfig(sConfigMgr->GetOption<uint8>("SoloRaids.Ulduar.Razorscale.FuseArmor.MaxStacks", 3), uint8(0), uint8(255));
 }
 
+float XT002ScrapbotHealingPct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.Ulduar.XT002.ScrapbotHealingPct", 0.5f), 0.0f, 10.0f);
+}
+
 bool DisableNetherspitePortalBuffs()
 {
     return sConfigMgr->GetOption<bool>("SoloRaids.Karazhan.Netherspite.DisablePortalBuffs", true);

@@ -30,6 +30,7 @@ void AddThaddiusSoloRaidScripts();
 void AddTemporusSoloRaidScripts();
 void AddTwinEmperorsSoloRaidScripts();
 void AddVaelastraszTheCorruptSoloRaidScripts();
+void AddXT002SoloRaidScripts();
 
 void Addmod_solo_raidsScripts()
 {
@@ -65,4 +66,5 @@ void Addmod_solo_raidsScripts()
     AddTemporusSoloRaidScripts();
     AddTwinEmperorsSoloRaidScripts();
     AddVaelastraszTheCorruptSoloRaidScripts();
+    AddXT002SoloRaidScripts();
 }

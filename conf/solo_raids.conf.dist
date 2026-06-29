@@ -335,3 +335,8 @@ SoloRaids.EyeOfEternity.Malygos.Vortex.DamagePct = 0.5
 # Maximum Fuse Armor stacks on the solo player during Razorscale in solo Ulduar.
 # Default: 3
 SoloRaids.Ulduar.Razorscale.FuseArmor.MaxStacks = 3
+
+# XT-002 Deconstructor Scrapbot healing percentage in solo Ulduar.
+# 0.5 means Scrapbots heal XT-002 for 50% of their normal amount.
+# Default: 0.5
+SoloRaids.Ulduar.XT002.ScrapbotHealingPct = 0.5
