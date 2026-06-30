@@ -32,7 +32,9 @@ void AddRazuviousSoloRaidScripts();
 void AddSunwellPlateauTrashSoloRaidScripts();
 void AddThaddiusSoloRaidScripts();
 void AddTemporusSoloRaidScripts();
+void AddThorimSoloRaidScripts();
 void AddTwinEmperorsSoloRaidScripts();
+void AddUlduarTrashSoloRaidScripts();
 void AddVaelastraszTheCorruptSoloRaidScripts();
 void AddXT002SoloRaidScripts();
 
@@ -72,7 +74,9 @@ void Addmod_solo_raidsScripts()
     AddSunwellPlateauTrashSoloRaidScripts();
     AddThaddiusSoloRaidScripts();
     AddTemporusSoloRaidScripts();
+    AddThorimSoloRaidScripts();
     AddTwinEmperorsSoloRaidScripts();
+    AddUlduarTrashSoloRaidScripts();
     AddVaelastraszTheCorruptSoloRaidScripts();
     AddXT002SoloRaidScripts();
 }

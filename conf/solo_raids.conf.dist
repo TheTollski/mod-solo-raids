@@ -357,11 +357,30 @@ SoloRaids.Ulduar.Kologarn.DisableStoneGrip = 1
 SoloRaids.Ulduar.Auriaya.Adds.MaxHealthPct = 0.5
 
 # Hodir max health percentage after other scaling in solo Ulduar.
-# 0.8 means 80%.
-# Default: 0.8
-SoloRaids.Ulduar.Hodir.MaxHealthPct = 0.8
+# 0.7 means 70%.
+# Default: 0.7
+SoloRaids.Ulduar.Hodir.MaxHealthPct = 0.7
 
 # Flash Freeze max health percentage after other scaling during Hodir in solo
 # Ulduar. 0.5 means 50%.
 # Default: 0.5
 SoloRaids.Ulduar.Hodir.FlashFreeze.MaxHealthPct = 0.5
+
+# Maximum Lightning Brand stacks from Dark Rune Thunderers on the solo player
+# in Ulduar.
+# Default: 5
+SoloRaids.Ulduar.Trash.LightningBrand.MaxStacks = 5
+
+# Pause Thorim's arena wave add spawns in solo Ulduar by removing spawned
+# Warbringers, Evokers, Commoners, and Champions.
+# Default: 1
+SoloRaids.Ulduar.Thorim.PauseArenaAddSpawns = 1
+
+# Prevent Thorim's solo arena-empty wipe from killing the player with Lightning
+# Orb's Lightning Destruction while the player is in the gauntlet.
+# Default: 1
+SoloRaids.Ulduar.Thorim.PreventLightningOrbWipe = 1
+
+# Maximum Lightning Charge stacks on Thorim in solo Ulduar.
+# Default: 5
+SoloRaids.Ulduar.Thorim.LightningCharge.MaxStacks = 5

@@ -339,4 +339,24 @@ float HodirFlashFreezeMaxHealthPct()
 {
     return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.Ulduar.Hodir.FlashFreeze.MaxHealthPct", 0.5f), 0.01f, 10.0f);
 }
+
+uint8 UlduarTrashLightningBrandMaxStacks()
+{
+    return ClampConfig(sConfigMgr->GetOption<uint8>("SoloRaids.Ulduar.Trash.LightningBrand.MaxStacks", 5), uint8(0), uint8(255));
+}
+
+bool PauseThorimArenaAddSpawns()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.Ulduar.Thorim.PauseArenaAddSpawns", true);
+}
+
+bool PreventThorimLightningOrbWipe()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.Ulduar.Thorim.PreventLightningOrbWipe", true);
+}
+
+uint8 ThorimLightningChargeMaxStacks()
+{
+    return ClampConfig(sConfigMgr->GetOption<uint8>("SoloRaids.Ulduar.Thorim.LightningCharge.MaxStacks", 5), uint8(0), uint8(255));
+}
 }

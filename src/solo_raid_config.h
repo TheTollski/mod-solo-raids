@@ -82,6 +82,10 @@ bool DisableKologarnStoneGrip();
 float AuriayaAddMaxHealthPct();
 float HodirMaxHealthPct();
 float HodirFlashFreezeMaxHealthPct();
+uint8 UlduarTrashLightningBrandMaxStacks();
+bool PauseThorimArenaAddSpawns();
+bool PreventThorimLightningOrbWipe();
+uint8 ThorimLightningChargeMaxStacks();
 }
 
 #endif
