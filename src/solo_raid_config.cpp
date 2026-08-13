@@ -369,4 +369,14 @@ float YoggSaronImmortalGuardianMaxHealthPct()
 {
     return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.Ulduar.YoggSaron.ImmortalGuardian.MaxHealthPct", 0.75f), 0.01f, 10.0f);
 }
+
+bool DisableLordJaraxxusIncinerateFlesh()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.TrialOfTheCrusader.LordJaraxxus.DisableIncinerateFlesh", true);
+}
+
+bool DisableLordJaraxxusNetherPower()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.TrialOfTheCrusader.LordJaraxxus.DisableNetherPower", true);
+}
 }

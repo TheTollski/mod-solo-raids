@@ -394,3 +394,15 @@ SoloRaids.Ulduar.YoggSaron.SkipPhaseTwo = 1
 # Yogg-Saron. 0.75 means 75%.
 # Default: 0.75
 SoloRaids.Ulduar.YoggSaron.ImmortalGuardian.MaxHealthPct = 0.75
+
+#
+# Trial of the Crusader
+#
+
+# Disable Lord Jaraxxus's Incinerate Flesh in solo Trial of the Crusader.
+# Default: 1
+SoloRaids.TrialOfTheCrusader.LordJaraxxus.DisableIncinerateFlesh = 1
+
+# Disable Lord Jaraxxus's Nether Power in solo Trial of the Crusader.
+# Default: 1
+SoloRaids.TrialOfTheCrusader.LordJaraxxus.DisableNetherPower = 1

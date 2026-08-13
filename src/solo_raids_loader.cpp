@@ -18,6 +18,7 @@ void AddKaelthasSunstriderSoloRaidScripts();
 void AddKazrogalSoloRaidScripts();
 void AddKologarnSoloRaidScripts();
 void AddLadyVashjSoloRaidScripts();
+void AddLordJaraxxusSoloRaidScripts();
 void AddMalygosSoloRaidScripts();
 void AddMagtheridonSoloRaidScripts();
 void AddMorogrimTidewalkerSoloRaidScripts();
@@ -61,6 +62,7 @@ void Addmod_solo_raidsScripts()
     AddKazrogalSoloRaidScripts();
     AddKologarnSoloRaidScripts();
     AddLadyVashjSoloRaidScripts();
+    AddLordJaraxxusSoloRaidScripts();
     AddMalygosSoloRaidScripts();
     AddMagtheridonSoloRaidScripts();
     AddMorogrimTidewalkerSoloRaidScripts();

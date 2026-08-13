@@ -88,6 +88,9 @@ bool PreventThorimLightningOrbWipe();
 uint8 ThorimLightningChargeMaxStacks();
 bool SkipYoggSaronPhaseTwo();
 float YoggSaronImmortalGuardianMaxHealthPct();
+
+bool DisableLordJaraxxusIncinerateFlesh();
+bool DisableLordJaraxxusNetherPower();
 }
 
 #endif
