@@ -359,4 +359,14 @@ uint8 ThorimLightningChargeMaxStacks()
 {
     return ClampConfig(sConfigMgr->GetOption<uint8>("SoloRaids.Ulduar.Thorim.LightningCharge.MaxStacks", 5), uint8(0), uint8(255));
 }
+
+bool SkipYoggSaronPhaseTwo()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.Ulduar.YoggSaron.SkipPhaseTwo", true);
+}
+
+float YoggSaronImmortalGuardianMaxHealthPct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.Ulduar.YoggSaron.ImmortalGuardian.MaxHealthPct", 0.75f), 0.01f, 10.0f);
+}
 }

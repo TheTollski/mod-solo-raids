@@ -384,3 +384,13 @@ SoloRaids.Ulduar.Thorim.PreventLightningOrbWipe = 1
 # Maximum Lightning Charge stacks on Thorim in solo Ulduar.
 # Default: 5
 SoloRaids.Ulduar.Thorim.LightningCharge.MaxStacks = 5
+
+# Skip Yogg-Saron phase 2 in solo Ulduar by moving directly from Yogg-Saron's
+# appearance to phase 3.
+# Default: 1
+SoloRaids.Ulduar.YoggSaron.SkipPhaseTwo = 1
+
+# Immortal Guardian max health percentage after other scaling during solo
+# Yogg-Saron. 0.75 means 75%.
+# Default: 0.75
+SoloRaids.Ulduar.YoggSaron.ImmortalGuardian.MaxHealthPct = 0.75

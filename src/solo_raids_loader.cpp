@@ -37,6 +37,7 @@ void AddTwinEmperorsSoloRaidScripts();
 void AddUlduarTrashSoloRaidScripts();
 void AddVaelastraszTheCorruptSoloRaidScripts();
 void AddXT002SoloRaidScripts();
+void AddYoggSaronSoloRaidScripts();
 
 void Addmod_solo_raidsScripts()
 {
@@ -79,4 +80,5 @@ void Addmod_solo_raidsScripts()
     AddUlduarTrashSoloRaidScripts();
     AddVaelastraszTheCorruptSoloRaidScripts();
     AddXT002SoloRaidScripts();
+    AddYoggSaronSoloRaidScripts();
 }

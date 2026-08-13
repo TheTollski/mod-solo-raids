@@ -86,6 +86,8 @@ uint8 UlduarTrashLightningBrandMaxStacks();
 bool PauseThorimArenaAddSpawns();
 bool PreventThorimLightningOrbWipe();
 uint8 ThorimLightningChargeMaxStacks();
+bool SkipYoggSaronPhaseTwo();
+float YoggSaronImmortalGuardianMaxHealthPct();
 }
 
 #endif
