@@ -379,4 +379,29 @@ bool DisableLordJaraxxusNetherPower()
 {
     return sConfigMgr->GetOption<bool>("SoloRaids.TrialOfTheCrusader.LordJaraxxus.DisableNetherPower", true);
 }
+
+float FactionChampionsDamagePct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.TrialOfTheCrusader.FactionChampions.DamagePct", 0.6f), 0.0f, 10.0f);
+}
+
+bool DisableFactionChampionsHealing()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.TrialOfTheCrusader.FactionChampions.DisableHealing", true);
+}
+
+bool DisableFactionChampionsHardCC()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.TrialOfTheCrusader.FactionChampions.DisableHardCC", true);
+}
+
+bool DisableFactionChampionsManaBurnAndInterrupts()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.TrialOfTheCrusader.FactionChampions.DisableManaBurnAndInterrupts", true);
+}
+
+bool DisableFactionChampionsMajorDefensives()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.TrialOfTheCrusader.FactionChampions.DisableMajorDefensives", true);
+}
 }

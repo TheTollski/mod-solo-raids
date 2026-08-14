@@ -91,6 +91,11 @@ float YoggSaronImmortalGuardianMaxHealthPct();
 
 bool DisableLordJaraxxusIncinerateFlesh();
 bool DisableLordJaraxxusNetherPower();
+float FactionChampionsDamagePct();
+bool DisableFactionChampionsHealing();
+bool DisableFactionChampionsHardCC();
+bool DisableFactionChampionsManaBurnAndInterrupts();
+bool DisableFactionChampionsMajorDefensives();
 }
 
 #endif

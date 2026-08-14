@@ -406,3 +406,27 @@ SoloRaids.TrialOfTheCrusader.LordJaraxxus.DisableIncinerateFlesh = 1
 # Disable Lord Jaraxxus's Nether Power in solo Trial of the Crusader.
 # Default: 1
 SoloRaids.TrialOfTheCrusader.LordJaraxxus.DisableNetherPower = 1
+
+# Faction Champions damage percentage against the solo player.
+# 0.35 means 35% of normal damage.
+# Default: 0.35
+SoloRaids.TrialOfTheCrusader.FactionChampions.DamagePct = 0.35
+
+# Disable Faction Champions healing and absorb-style support spells such as
+# Power Word: Shield in solo Trial of the Crusader.
+# Default: 1
+SoloRaids.TrialOfTheCrusader.FactionChampions.DisableHealing = 1
+
+# Disable Faction Champions hard crowd control in solo Trial of the Crusader.
+# Default: 1
+SoloRaids.TrialOfTheCrusader.FactionChampions.DisableHardCC = 1
+
+# Disable Faction Champions Mana Burn and heavy interrupts in solo Trial of the
+# Crusader.
+# Default: 1
+SoloRaids.TrialOfTheCrusader.FactionChampions.DisableManaBurnAndInterrupts = 1
+
+# Disable Faction Champions major defensive cooldowns in solo Trial of the
+# Crusader.
+# Default: 1
+SoloRaids.TrialOfTheCrusader.FactionChampions.DisableMajorDefensives = 1
