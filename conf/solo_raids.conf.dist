@@ -430,3 +430,17 @@ SoloRaids.TrialOfTheCrusader.FactionChampions.DisableManaBurnAndInterrupts = 1
 # Crusader.
 # Default: 1
 SoloRaids.TrialOfTheCrusader.FactionChampions.DisableMajorDefensives = 1
+
+# Maximum Expose Weakness stacks on the solo player during the Anub'arak
+# encounter.
+# Default: 1
+SoloRaids.TrialOfTheCrusader.Anubarak.ExposeWeaknessMaxStacks = 1
+
+# Maximum Acid-Drenched Mandibles stacks on the solo player during the
+# Anub'arak encounter.
+# Default: 10
+SoloRaids.TrialOfTheCrusader.Anubarak.AcidDrenchedMandiblesMaxStacks = 10
+
+# Disable Anub'arak's Berserk enrage timer in solo Trial of the Crusader.
+# Default: 1
+SoloRaids.TrialOfTheCrusader.Anubarak.DisableEnrage = 1

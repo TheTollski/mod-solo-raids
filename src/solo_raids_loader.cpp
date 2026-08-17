@@ -1,4 +1,5 @@
 void AddAeonusSoloRaidScripts();
+void AddAnubarakTrialSoloRaidScripts();
 void AddAssemblyOfIronSoloRaidScripts();
 void AddAuriayaSoloRaidScripts();
 void AddBrutallusSoloRaidScripts();
@@ -44,6 +45,7 @@ void AddYoggSaronSoloRaidScripts();
 void Addmod_solo_raidsScripts()
 {
     AddAeonusSoloRaidScripts();
+    AddAnubarakTrialSoloRaidScripts();
     AddAssemblyOfIronSoloRaidScripts();
     AddAuriayaSoloRaidScripts();
     AddBrutallusSoloRaidScripts();

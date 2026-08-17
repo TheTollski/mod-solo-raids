@@ -404,4 +404,19 @@ bool DisableFactionChampionsMajorDefensives()
 {
     return sConfigMgr->GetOption<bool>("SoloRaids.TrialOfTheCrusader.FactionChampions.DisableMajorDefensives", true);
 }
+
+uint8 AnubarakTrialExposeWeaknessMaxStacks()
+{
+    return ClampConfig<uint8>(sConfigMgr->GetOption<uint8>("SoloRaids.TrialOfTheCrusader.Anubarak.ExposeWeaknessMaxStacks", 2), 0, 255);
+}
+
+uint8 AnubarakTrialAcidDrenchedMandiblesMaxStacks()
+{
+    return ClampConfig<uint8>(sConfigMgr->GetOption<uint8>("SoloRaids.TrialOfTheCrusader.Anubarak.AcidDrenchedMandiblesMaxStacks", 10), 0, 255);
+}
+
+bool DisableAnubarakTrialEnrage()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.TrialOfTheCrusader.Anubarak.DisableEnrage", true);
+}
 }

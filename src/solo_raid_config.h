@@ -96,6 +96,9 @@ bool DisableFactionChampionsHealing();
 bool DisableFactionChampionsHardCC();
 bool DisableFactionChampionsManaBurnAndInterrupts();
 bool DisableFactionChampionsMajorDefensives();
+uint8 AnubarakTrialExposeWeaknessMaxStacks();
+uint8 AnubarakTrialAcidDrenchedMandiblesMaxStacks();
+bool DisableAnubarakTrialEnrage();
 }
 
 #endif
