@@ -100,9 +100,10 @@ uint8 AnubarakTrialExposeWeaknessMaxStacks();
 uint8 AnubarakTrialAcidDrenchedMandiblesMaxStacks();
 bool DisableAnubarakTrialEnrage();
 
-float LordMarrowgarBoneSliceDamagePct();
 uint8 IcecrownCitadelMortalWoundMaxStacks();
 float IcecrownCitadelCombobulatingSprayDurationPct();
+float LordMarrowgarBoneSliceDamagePct();
+uint8 FestergutGastricBloatMaxStacks();
 }
 
 #endif

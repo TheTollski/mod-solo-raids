@@ -8,6 +8,7 @@ void AddEbonrocSoloRaidScripts();
 void AddFaerlinaSoloRaidScripts();
 void AddFactionChampionsSoloRaidScripts();
 void AddFathomLordKarathressSoloRaidScripts();
+void AddFestergutSoloRaidScripts();
 void AddGluthSoloRaidScripts();
 void AddGurtoggBloodboilSoloRaidScripts();
 void AddHighKingMaulgarSoloRaidScripts();
@@ -56,6 +57,7 @@ void Addmod_solo_raidsScripts()
     AddFaerlinaSoloRaidScripts();
     AddFactionChampionsSoloRaidScripts();
     AddFathomLordKarathressSoloRaidScripts();
+    AddFestergutSoloRaidScripts();
     AddGluthSoloRaidScripts();
     AddGurtoggBloodboilSoloRaidScripts();
     AddHighKingMaulgarSoloRaidScripts();
