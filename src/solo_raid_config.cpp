@@ -439,4 +439,14 @@ uint8 FestergutGastricBloatMaxStacks()
 {
     return ClampConfig(sConfigMgr->GetOption<uint8>("SoloRaids.IcecrownCitadel.Festergut.GastricBloat.MaxStacks", 5), uint8(0), uint8(255));
 }
+
+float ProfessorPutricideMaxHealthPct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.IcecrownCitadel.ProfessorPutricide.MaxHealthPct", 0.7f), 0.01f, 10.0f);
+}
+
+float ProfessorPutricideDamagePct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.IcecrownCitadel.ProfessorPutricide.DamagePct", 0.75f), 0.0f, 10.0f);
+}
 }

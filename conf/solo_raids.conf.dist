@@ -467,3 +467,13 @@ SoloRaids.IcecrownCitadel.LordMarrowgar.BoneSliceDamagePct = 0.5
 # Icecrown Citadel.
 # Default: 8
 SoloRaids.IcecrownCitadel.Festergut.GastricBloat.MaxStacks = 8
+
+# Professor Putricide max health percentage after other scaling such as
+# AutoBalance in solo Icecrown Citadel. 0.7 means 70%.
+# Default: 0.7
+SoloRaids.IcecrownCitadel.ProfessorPutricide.MaxHealthPct = 0.7
+
+# Professor Putricide melee damage percentage against the solo player in solo
+# Icecrown Citadel. 0.75 means 75% of normal damage.
+# Default: 0.75
+SoloRaids.IcecrownCitadel.ProfessorPutricide.DamagePct = 0.75

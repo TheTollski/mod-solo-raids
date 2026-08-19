@@ -104,6 +104,8 @@ uint8 IcecrownCitadelMortalWoundMaxStacks();
 float IcecrownCitadelCombobulatingSprayDurationPct();
 float LordMarrowgarBoneSliceDamagePct();
 uint8 FestergutGastricBloatMaxStacks();
+float ProfessorPutricideMaxHealthPct();
+float ProfessorPutricideDamagePct();
 }
 
 #endif

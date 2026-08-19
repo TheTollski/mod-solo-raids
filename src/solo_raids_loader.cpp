@@ -31,6 +31,7 @@ void AddMountHyjalTrashSoloRaidScripts();
 void AddMuruSoloRaidScripts();
 void AddNetherspiteSoloRaidScripts();
 void AddPatchwerkSoloRaidScripts();
+void AddProfessorPutricideSoloRaidScripts();
 void AddRazorgoreTheUntamedSoloRaidScripts();
 void AddRazorscaleSoloRaidScripts();
 void AddReliquaryOfSoulsSoloRaidScripts();
@@ -80,6 +81,7 @@ void Addmod_solo_raidsScripts()
     AddMuruSoloRaidScripts();
     AddNetherspiteSoloRaidScripts();
     AddPatchwerkSoloRaidScripts();
+    AddProfessorPutricideSoloRaidScripts();
     AddRazorgoreTheUntamedSoloRaidScripts();
     AddRazorscaleSoloRaidScripts();
     AddReliquaryOfSoulsSoloRaidScripts();
