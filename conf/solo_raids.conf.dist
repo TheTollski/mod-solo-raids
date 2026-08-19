@@ -444,3 +444,21 @@ SoloRaids.TrialOfTheCrusader.Anubarak.AcidDrenchedMandiblesMaxStacks = 10
 # Disable Anub'arak's Berserk enrage timer in solo Trial of the Crusader.
 # Default: 1
 SoloRaids.TrialOfTheCrusader.Anubarak.DisableEnrage = 1
+
+#
+# Icecrown Citadel
+#
+
+# Lord Marrowgar Bone Slice damage percentage against the solo player.
+# 0.5 means 50% of normal damage.
+# Default: 0.5
+SoloRaids.IcecrownCitadel.LordMarrowgar.BoneSliceDamagePct = 0.5
+
+# Maximum Mortal Wound stacks on the solo player in Icecrown Citadel.
+# Default: 3
+SoloRaids.IcecrownCitadel.Trash.MortalWound.MaxStacks = 3
+
+# Combobulating Spray duration percentage on the solo player in Icecrown Citadel.
+# 0.1 means 10% of normal duration.
+# Default: 0.1
+SoloRaids.IcecrownCitadel.Trash.CombobulatingSpray.DurationPct = 0.1

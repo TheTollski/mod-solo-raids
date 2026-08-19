@@ -20,6 +20,8 @@ void AddKaelthasSunstriderSoloRaidScripts();
 void AddKazrogalSoloRaidScripts();
 void AddKologarnSoloRaidScripts();
 void AddLadyVashjSoloRaidScripts();
+void AddIcecrownCitadelTrashSoloRaidScripts();
+void AddLordMarrowgarSoloRaidScripts();
 void AddLordJaraxxusSoloRaidScripts();
 void AddMalygosSoloRaidScripts();
 void AddMagtheridonSoloRaidScripts();
@@ -66,6 +68,8 @@ void Addmod_solo_raidsScripts()
     AddKazrogalSoloRaidScripts();
     AddKologarnSoloRaidScripts();
     AddLadyVashjSoloRaidScripts();
+    AddIcecrownCitadelTrashSoloRaidScripts();
+    AddLordMarrowgarSoloRaidScripts();
     AddLordJaraxxusSoloRaidScripts();
     AddMalygosSoloRaidScripts();
     AddMagtheridonSoloRaidScripts();

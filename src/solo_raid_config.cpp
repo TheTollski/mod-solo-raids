@@ -419,4 +419,19 @@ bool DisableAnubarakTrialEnrage()
 {
     return sConfigMgr->GetOption<bool>("SoloRaids.TrialOfTheCrusader.Anubarak.DisableEnrage", true);
 }
+
+float LordMarrowgarBoneSliceDamagePct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.IcecrownCitadel.LordMarrowgar.BoneSliceDamagePct", 0.5f), 0.0f, 10.0f);
+}
+
+uint8 IcecrownCitadelMortalWoundMaxStacks()
+{
+    return ClampConfig(sConfigMgr->GetOption<uint8>("SoloRaids.IcecrownCitadel.Trash.MortalWound.MaxStacks", 3), uint8(0), uint8(255));
+}
+
+float IcecrownCitadelCombobulatingSprayDurationPct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.IcecrownCitadel.Trash.CombobulatingSpray.DurationPct", 0.1f), 0.0f, 10.0f);
+}
 }
