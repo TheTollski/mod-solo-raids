@@ -449,4 +449,14 @@ float ProfessorPutricideDamagePct()
 {
     return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.IcecrownCitadel.ProfessorPutricide.DamagePct", 0.75f), 0.0f, 10.0f);
 }
+
+float BloodPrinceCouncilMeleeDamagePct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.IcecrownCitadel.BloodPrinceCouncil.MeleeDamagePct", 0.75f), 0.0f, 10.0f);
+}
+
+float BloodPrinceCouncilShadowLanceDamagePct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.IcecrownCitadel.BloodPrinceCouncil.ShadowLanceDamagePct", 0.75f), 0.0f, 10.0f);
+}
 }

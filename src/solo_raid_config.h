@@ -106,6 +106,8 @@ float LordMarrowgarBoneSliceDamagePct();
 uint8 FestergutGastricBloatMaxStacks();
 float ProfessorPutricideMaxHealthPct();
 float ProfessorPutricideDamagePct();
+float BloodPrinceCouncilMeleeDamagePct();
+float BloodPrinceCouncilShadowLanceDamagePct();
 }
 
 #endif
