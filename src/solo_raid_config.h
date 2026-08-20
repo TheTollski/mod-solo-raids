@@ -110,6 +110,8 @@ float BloodPrinceCouncilMeleeDamagePct();
 float BloodPrinceCouncilShadowLanceDamagePct();
 float BloodQueenLanathelMaxHealthPct();
 float BloodQueenLanathelDamagePct();
+float ValithriaDreamwalkerAddKillHealPct();
+float ValithriaDreamwalkerHealingReceivedPct();
 }
 
 #endif

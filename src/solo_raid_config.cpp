@@ -469,4 +469,14 @@ float BloodQueenLanathelDamagePct()
 {
     return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.IcecrownCitadel.BloodQueenLanathel.DamagePct", 1.5f), 0.0f, 10.0f);
 }
+
+float ValithriaDreamwalkerAddKillHealPct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.IcecrownCitadel.ValithriaDreamwalker.AddKillHealPct", 1.0f), 0.0f, 10.0f);
+}
+
+float ValithriaDreamwalkerHealingReceivedPct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.IcecrownCitadel.ValithriaDreamwalker.HealingReceivedPct", 25.0f), 0.0f, 100.0f);
+}
 }

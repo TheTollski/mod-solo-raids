@@ -498,3 +498,15 @@ SoloRaids.IcecrownCitadel.BloodQueenLanathel.MaxHealthPct = 0.5
 # player in solo Icecrown Citadel. 1.5 means 150% of normal damage.
 # Default: 1.5
 SoloRaids.IcecrownCitadel.BloodQueenLanathel.DamagePct = 1.5
+
+# Valithria Dreamwalker heal amount from killing encounter adds in solo
+# Icecrown Citadel, as a percentage of the killed add's max health.
+# 1.0 means 100% of the killed add's max health.
+# Default: 1.0
+SoloRaids.IcecrownCitadel.ValithriaDreamwalker.AddKillHealPct = 1.0
+
+# Valithria Dreamwalker healing multiplier in solo Icecrown Citadel.
+# Use this to compensate for other modules that reduce healing in scaled raids.
+# 25.0 means 2500% of the post-scaling heal amount.
+# Default: 25.0
+SoloRaids.IcecrownCitadel.ValithriaDreamwalker.HealingReceivedPct = 25.0
