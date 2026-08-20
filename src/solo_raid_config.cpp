@@ -459,4 +459,14 @@ float BloodPrinceCouncilShadowLanceDamagePct()
 {
     return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.IcecrownCitadel.BloodPrinceCouncil.ShadowLanceDamagePct", 0.75f), 0.0f, 10.0f);
 }
+
+float BloodQueenLanathelMaxHealthPct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.IcecrownCitadel.BloodQueenLanathel.MaxHealthPct", 0.5f), 0.01f, 10.0f);
+}
+
+float BloodQueenLanathelDamagePct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.IcecrownCitadel.BloodQueenLanathel.DamagePct", 1.5f), 0.0f, 10.0f);
+}
 }

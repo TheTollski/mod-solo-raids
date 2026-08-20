@@ -23,6 +23,7 @@ void AddKologarnSoloRaidScripts();
 void AddLadyVashjSoloRaidScripts();
 void AddIcecrownCitadelTrashSoloRaidScripts();
 void AddBloodPrinceCouncilSoloRaidScripts();
+void AddBloodQueenLanathelSoloRaidScripts();
 void AddLordMarrowgarSoloRaidScripts();
 void AddLordJaraxxusSoloRaidScripts();
 void AddMalygosSoloRaidScripts();
@@ -74,6 +75,7 @@ void Addmod_solo_raidsScripts()
     AddLadyVashjSoloRaidScripts();
     AddIcecrownCitadelTrashSoloRaidScripts();
     AddBloodPrinceCouncilSoloRaidScripts();
+    AddBloodQueenLanathelSoloRaidScripts();
     AddLordMarrowgarSoloRaidScripts();
     AddLordJaraxxusSoloRaidScripts();
     AddMalygosSoloRaidScripts();

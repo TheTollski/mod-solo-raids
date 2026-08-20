@@ -108,6 +108,8 @@ float ProfessorPutricideMaxHealthPct();
 float ProfessorPutricideDamagePct();
 float BloodPrinceCouncilMeleeDamagePct();
 float BloodPrinceCouncilShadowLanceDamagePct();
+float BloodQueenLanathelMaxHealthPct();
+float BloodQueenLanathelDamagePct();
 }
 
 #endif

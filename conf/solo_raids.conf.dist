@@ -488,3 +488,13 @@ SoloRaids.IcecrownCitadel.BloodPrinceCouncil.MeleeDamagePct = 0.75
 # 0.75 means 75% of normal Shadow Lance damage.
 # Default: 0.75
 SoloRaids.IcecrownCitadel.BloodPrinceCouncil.ShadowLanceDamagePct = 0.75
+
+# Blood-Queen Lana'thel max health percentage after other scaling such as
+# AutoBalance in solo Icecrown Citadel. 0.5 means 50%.
+# Default: 0.5
+SoloRaids.IcecrownCitadel.BloodQueenLanathel.MaxHealthPct = 0.5
+
+# Blood-Queen Lana'thel melee and spell damage percentage against the solo
+# player in solo Icecrown Citadel. 1.5 means 150% of normal damage.
+# Default: 1.5
+SoloRaids.IcecrownCitadel.BloodQueenLanathel.DamagePct = 1.5
