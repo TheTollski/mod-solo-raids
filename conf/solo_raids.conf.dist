@@ -510,3 +510,16 @@ SoloRaids.IcecrownCitadel.ValithriaDreamwalker.AddKillHealPct = 1.0
 # 25.0 means 2500% of the post-scaling heal amount.
 # Default: 25.0
 SoloRaids.IcecrownCitadel.ValithriaDreamwalker.HealingReceivedPct = 25.0
+
+# Disable Sindragosa's Ice Tomb in solo Icecrown Citadel.
+# Default: 1
+SoloRaids.IcecrownCitadel.Sindragosa.DisableIceTomb = 1
+
+# Disable Sindragosa's Berserk enrage timer in solo Icecrown Citadel.
+# Default: 1
+SoloRaids.IcecrownCitadel.Sindragosa.DisableBerserk = 1
+
+# Maximum Mystic Buffet stacks on the solo player during Sindragosa in solo
+# Icecrown Citadel.
+# Default: 3
+SoloRaids.IcecrownCitadel.Sindragosa.MysticBuffet.MaxStacks = 3

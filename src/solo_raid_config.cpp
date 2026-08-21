@@ -479,4 +479,19 @@ float ValithriaDreamwalkerHealingReceivedPct()
 {
     return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.IcecrownCitadel.ValithriaDreamwalker.HealingReceivedPct", 25.0f), 0.0f, 100.0f);
 }
+
+bool DisableSindragosaIceTomb()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.IcecrownCitadel.Sindragosa.DisableIceTomb", true);
+}
+
+bool DisableSindragosaBerserk()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.IcecrownCitadel.Sindragosa.DisableBerserk", true);
+}
+
+uint8 SindragosaMysticBuffetMaxStacks()
+{
+    return ClampConfig(sConfigMgr->GetOption<uint8>("SoloRaids.IcecrownCitadel.Sindragosa.MysticBuffet.MaxStacks", 3), uint8(0), uint8(255));
+}
 }

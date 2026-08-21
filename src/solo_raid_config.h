@@ -112,6 +112,9 @@ float BloodQueenLanathelMaxHealthPct();
 float BloodQueenLanathelDamagePct();
 float ValithriaDreamwalkerAddKillHealPct();
 float ValithriaDreamwalkerHealingReceivedPct();
+bool DisableSindragosaIceTomb();
+bool DisableSindragosaBerserk();
+uint8 SindragosaMysticBuffetMaxStacks();
 }
 
 #endif
