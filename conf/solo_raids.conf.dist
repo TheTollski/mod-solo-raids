@@ -523,3 +523,22 @@ SoloRaids.IcecrownCitadel.Sindragosa.DisableBerserk = 1
 # Icecrown Citadel.
 # Default: 3
 SoloRaids.IcecrownCitadel.Sindragosa.MysticBuffet.MaxStacks = 3
+
+# Drudge Ghoul max health percentage after other scaling such as AutoBalance
+# during The Lich King in solo Icecrown Citadel. 0.25 means 25%.
+# Default: 0.25
+SoloRaids.IcecrownCitadel.LichKing.DrudgeGhoul.MaxHealthPct = 0.25
+
+# Shambling Horror max health percentage after other scaling such as
+# AutoBalance during The Lich King in solo Icecrown Citadel. 0.25 means 25%.
+# Default: 0.25
+SoloRaids.IcecrownCitadel.LichKing.ShamblingHorror.MaxHealthPct = 0.25
+
+# Restore Remorseless Winter damage after other scaling such as AutoBalance by
+# multiplying damage by raid size divided by active raid players.
+# Default: 1
+SoloRaids.IcecrownCitadel.LichKing.RestoreRemorselessWinterDamage = 1
+
+# Disable Ice Sphere spawns during The Lich King in solo Icecrown Citadel.
+# Default: 1
+SoloRaids.IcecrownCitadel.LichKing.DisableIceSpheres = 1

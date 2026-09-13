@@ -494,4 +494,24 @@ uint8 SindragosaMysticBuffetMaxStacks()
 {
     return ClampConfig(sConfigMgr->GetOption<uint8>("SoloRaids.IcecrownCitadel.Sindragosa.MysticBuffet.MaxStacks", 3), uint8(0), uint8(255));
 }
+
+float LichKingDrudgeGhoulMaxHealthPct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.IcecrownCitadel.LichKing.DrudgeGhoul.MaxHealthPct", 0.25f), 0.01f, 10.0f);
+}
+
+float LichKingShamblingHorrorMaxHealthPct()
+{
+    return ClampConfig(sConfigMgr->GetOption<float>("SoloRaids.IcecrownCitadel.LichKing.ShamblingHorror.MaxHealthPct", 0.25f), 0.01f, 10.0f);
+}
+
+bool LichKingRestoreRemorselessWinterDamage()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.IcecrownCitadel.LichKing.RestoreRemorselessWinterDamage", true);
+}
+
+bool DisableLichKingIceSpheres()
+{
+    return sConfigMgr->GetOption<bool>("SoloRaids.IcecrownCitadel.LichKing.DisableIceSpheres", true);
+}
 }

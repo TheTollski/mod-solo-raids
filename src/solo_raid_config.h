@@ -115,6 +115,10 @@ float ValithriaDreamwalkerHealingReceivedPct();
 bool DisableSindragosaIceTomb();
 bool DisableSindragosaBerserk();
 uint8 SindragosaMysticBuffetMaxStacks();
+float LichKingDrudgeGhoulMaxHealthPct();
+float LichKingShamblingHorrorMaxHealthPct();
+bool LichKingRestoreRemorselessWinterDamage();
+bool DisableLichKingIceSpheres();
 }
 
 #endif
